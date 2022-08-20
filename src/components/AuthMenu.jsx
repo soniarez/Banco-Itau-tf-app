@@ -4,7 +4,7 @@ const AuthMenu = () => {
   return (
     <div>
       <div className='bg-yellow-500'>
-        Menu Autorizaciones
+        Menu Autorizaciones Neuvo!!!
       </div>
     </div>
   )
