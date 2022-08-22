@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 const DashboardMulti = () => {
   return (
     <div>
-      <div className="bg-gray-500">
-        Dashboard Multiempresa
-      </div>
-    </div>
-  )
-}
+      <div className='bg-gray-500'>Dashboard Multiempresa</div>
 
-export default DashboardMulti
+      <div className=''></div>
+    </div>
+  );
+};
+
+export default DashboardMulti;
