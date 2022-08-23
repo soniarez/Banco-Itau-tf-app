@@ -4,6 +4,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import Checkbox from '@mui/material/Checkbox';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+import AuthMenuChart from './AuthMenuChart';
 import '../../src/App.css';
 
 const AuthMenu = () => {
@@ -84,9 +85,9 @@ const AuthMenu = () => {
               <div>
                 <Checkbox
                   // onClick={() => authorizeTransaction(params)}
-                  onChange={(e)=>handleChange(e, params.row.docId)}
+                  onChange={(e) => handleChange(e, params.row.docId)}
                   checked={params.row.isAuthorized}
-                  size="small"
+                  size='small'
                   sx={{
                     '&.Mui-checked': {
                       color: '#5db761',
@@ -113,9 +114,9 @@ const AuthMenu = () => {
             {data ? (
               <div>
                 <Checkbox
-                  onChange={(e)=>handleChangeRejected(e, params.row.docId)}
+                  onChange={(e) => handleChangeRejected(e, params.row.docId)}
                   checked={params.row.isRejected}
-                  size="small"
+                  size='small'
                   sx={{
                     '&.Mui-checked': {
                       color: '#f44336',
@@ -134,9 +135,14 @@ const AuthMenu = () => {
 
   //GETTING DATA FROM FIREBASE
   useEffect(() => {
-    onSnapshot(collection(db, 'transaction'), snapshot => {
-      const dataFromFirestore = snapshot.docs.map(doc => {
-        return { docId: doc.id, isAuthorized: false, isRejected: false, ...doc.data() };
+    onSnapshot(collection(db, 'transaction'), (snapshot) => {
+      const dataFromFirestore = snapshot.docs.map((doc) => {
+        return {
+          docId: doc.id,
+          isAuthorized: false,
+          isRejected: false,
+          ...doc.data(),
+        };
       });
       setData(dataFromFirestore);
     });
@@ -149,10 +155,10 @@ const AuthMenu = () => {
         return element.docId === docId
           ? {
               ...element,
-              isAuthorized: !element.isAuthorized
+              isAuthorized: !element.isAuthorized,
             }
           : element;
-      })
+      }),
     ]);
   };
 
@@ -163,20 +169,20 @@ const AuthMenu = () => {
         return element.docId === docId
           ? {
               ...element,
-              isRejected: !element.isRejected
+              isRejected: !element.isRejected,
             }
           : element;
-      })
+      }),
     ]);
   };
 
   //AUTHORIZE TRANSACTIONS
-  const authorizeTransaction = transaction => {
+  const authorizeTransaction = (transaction) => {
     const isTransactionPresent = authorize.some(
-      item => item.id === transaction.id
+      (item) => item.id === transaction.id
     );
     if (isTransactionPresent) {
-      const updateAuthorize = authorize.map(item => {
+      const updateAuthorize = authorize.map((item) => {
         if (item.id === transaction.id) {
           return { ...item, count: --item.count };
         }
@@ -189,12 +195,12 @@ const AuthMenu = () => {
   };
 
   //REJECT TRANSACTIONS
-  const rejectTransaction = transaction => {
+  const rejectTransaction = (transaction) => {
     const isTransactionPresent = reject.some(
-      item => item.id === transaction.id
+      (item) => item.id === transaction.id
     );
     if (isTransactionPresent) {
-      const updateReject = reject.map(item => {
+      const updateReject = reject.map((item) => {
         if (item.id === transaction.id) {
           return { ...item, count: --item.count };
         }
@@ -206,42 +212,45 @@ const AuthMenu = () => {
     }
   };
 
-  //FILTERING PENDING 
-  const pendingTransactions = data.filter(item => {
+  //FILTERING PENDING
+  const pendingTransactions = data.filter((item) => {
     return item.status === 'pendiente';
   });
 
-  //EXECUTE TRANSACTION 
-const sendTransaction = () => { 
+  //EXECUTE TRANSACTION
+  const sendTransaction = () => {
+    const authorizeTransactions = data.filter(
+      (item) => item.isAuthorized === true
+    );
+    const rejectedTransactions = data.filter(
+      (item) => item.isRejected === true
+    );
 
-    const authorizeTransactions = data.filter((item) => item.isAuthorized === true)
-    const rejectedTransactions = data.filter((item) => item.isRejected === true)
-
-    if(authorizeTransactions){
+    if (authorizeTransactions) {
       const authorizeArr = authorizeTransactions.map((item) => {
         const sendTransaction = doc(db, 'transaction', item.docId);
-    
-          updateDoc(sendTransaction, {
-            status: 'aprobada',
-          }); 
-       })
+
+        updateDoc(sendTransaction, {
+          status: 'aprobada',
+        });
+      });
     }
-     
-    if(rejectedTransactions){
+
+    if (rejectedTransactions) {
       const rejectedArr = rejectedTransactions.map((item) => {
         const sendTransaction = doc(db, 'transaction', item.docId);
-          updateDoc(sendTransaction, {
-            status: 'rechazada',
-          }); 
-       })
+        updateDoc(sendTransaction, {
+          status: 'rechazada',
+        });
+      });
     }
-  }; 
-  
+  };
+
   return (
     <div>
       <h2>Autorizar Transacciones Multiempresa: </h2>
       <div style={{ height: 450, width: '72%' }}>
-        <DataGrid 
+        <DataGrid
           rowHeight={25}
           columns={columns}
           rows={pendingTransactions}
@@ -259,12 +268,13 @@ const sendTransaction = () => {
               bgcolor: '#B4B4B4',
             },
           }}
-          getRowClassName={params => `itau-app-${params.row.amount}`}
+          getRowClassName={(params) => `itau-app-${params.row.amount}`}
         />
       </div>
-      <button onClick={() => sendTransaction()}>
-        Ejecutar
-      </button>
+      <button onClick={() => sendTransaction()}>Ejecutar</button>
+      <div>
+        <AuthMenuChart data={data} />
+      </div>
     </div>
   );
 };

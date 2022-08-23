@@ -5,15 +5,13 @@ import Footer from './components/Footer';
 import Center from './components/Center';
 import './index.css';
 
-
 function App() {
   return (
     <div>
       <NavBar />
-      <div className="main-grid">
+      <div className='main-grid'>
         <SideBar />
         <div>
-          
           <Center />
         </div>
       </div>
