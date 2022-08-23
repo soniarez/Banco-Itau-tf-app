@@ -2,19 +2,21 @@ import React from 'react'
 
 const SideBar = () => {
   return (
-    <div className=' bg-gray-200 rounded-xl shadow border p-8 m-10'> 
+
+    <div className=' bg-gray-200  shadow border '> 
     {/* Probando el costado y sus colores y tamaños */}
-      <h1>Autorizar Transacciones</h1>
+    <button className=' '>Autorizar Transacciones</button>
       <h1>Ultimos Movimientos</h1>
     </div>
   )
+  
 }
 
 export default SideBar
 
 
 // import React from 'react'
-
+//visible hover:hidden
 
 
 // const SideBar = () => {

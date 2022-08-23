@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const NavBar = () => {
   return (
     <div className='bg-teal-500 w-screen h-[100px] flex flex-row justify-between'>
