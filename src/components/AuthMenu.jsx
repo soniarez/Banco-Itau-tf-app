@@ -53,13 +53,13 @@ const AuthMenu = () => {
       width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      renderCell: params => {
+      renderCell: (params) => {
         return (
           <div>
             {data ? (
               <div>
                 <Checkbox
-                  size="small"
+                  size='small'
                   icon={<RadioButtonUncheckedIcon />}
                   checkedIcon={<RadioButtonCheckedIcon />}
                 />
@@ -77,7 +77,7 @@ const AuthMenu = () => {
       width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      renderCell: params => {
+      renderCell: (params) => {
         return (
           <div>
             {data ? (
@@ -107,7 +107,7 @@ const AuthMenu = () => {
       width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      renderCell: params => {
+      renderCell: (params) => {
         return (
           <div>
             {data ? (
@@ -230,14 +230,13 @@ const sendTransaction = () => {
     if(rejectedTransactions){
       const rejectedArr = rejectedTransactions.map((item) => {
         const sendTransaction = doc(db, 'transaction', item.docId);
-    
           updateDoc(sendTransaction, {
             status: 'rechazada',
           }); 
        })
     }
   }; 
-
+  
   return (
     <div>
       <h2>Autorizar Transacciones Multiempresa: </h2>
