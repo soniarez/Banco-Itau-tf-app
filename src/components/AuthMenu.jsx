@@ -8,21 +8,21 @@ import '../../src/App.css';
 
 const AuthMenu = () => {
   const [data, setData] = useState([]);
-  const [authorize, setAuthorize] = useState([]);
-  const [reject, setReject] = useState([]);
+  //const [authorize, setAuthorize] = useState([]);
+  //const [reject, setReject] = useState([]);
 
   const columns = [
     {
       field: 'date',
       headerName: 'Fecha y Hora',
-      width: 130,
+      width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
     },
     {
       field: 'company',
       headerName: 'Empresa',
-      width: 130,
+      width: 200,
       headerAlign: 'center',
       headerClassName: 'itau-app',
     },
@@ -43,14 +43,14 @@ const AuthMenu = () => {
     {
       field: 'amount',
       headerName: 'Monto',
-      width: 130,
+      width: 170,
       headerAlign: 'center',
       headerClassName: 'itau-app',
     },
     {
       field: 'details',
-      headerName: 'Ver Detalles',
-      width: 130,
+      headerName: 'Detalles',
+      width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       renderCell: params => {
@@ -78,16 +78,15 @@ const AuthMenu = () => {
       headerAlign: 'center',
       headerClassName: 'itau-app',
       renderCell: params => {
-        //console.log(params, "params")
         return (
           <div>
             {data ? (
               <div>
                 <Checkbox
-                  onClick={() => authorizeTransaction(params)}
+                  // onClick={() => authorizeTransaction(params)}
+                  onChange={(e)=>handleChange(e, params.row.docId)}
+                  checked={params.row.isAuthorized}
                   size="small"
-                  /* icon={<RadioButtonUncheckedIcon />}
-                  checkedIcon={<RadioButtonCheckedIcon />} */
                   sx={{
                     '&.Mui-checked': {
                       color: '#5db761',
@@ -114,10 +113,9 @@ const AuthMenu = () => {
             {data ? (
               <div>
                 <Checkbox
-                  onClick={() => rejectTransaction(params)}
+                  onChange={(e)=>handleChangeRejected(e, params.row.docId)}
+                  checked={params.row.isRejected}
                   size="small"
-                  icon={<RadioButtonUncheckedIcon />}
-                  checkedIcon={<RadioButtonCheckedIcon />}
                   sx={{
                     '&.Mui-checked': {
                       color: '#f44336',
@@ -138,11 +136,39 @@ const AuthMenu = () => {
   useEffect(() => {
     onSnapshot(collection(db, 'transaction'), snapshot => {
       const dataFromFirestore = snapshot.docs.map(doc => {
-        return { docId: doc.id, isAuthorized: false, ...doc.data() };
+        return { docId: doc.id, isAuthorized: false, isRejected: false, ...doc.data() };
       });
       setData(dataFromFirestore);
     });
   }, []);
+
+  //HANDLECHANGE
+  const handleChange = (e, docId) => {
+    setData((prevState) => [
+      ...prevState.map((element) => {
+        return element.docId === docId
+          ? {
+              ...element,
+              isAuthorized: !element.isAuthorized
+            }
+          : element;
+      })
+    ]);
+  };
+
+  //HANDLECHANGE
+  const handleChangeRejected = (e, docId) => {
+    setData((prevState) => [
+      ...prevState.map((element) => {
+        return element.docId === docId
+          ? {
+              ...element,
+              isRejected: !element.isRejected
+            }
+          : element;
+      })
+    ]);
+  };
 
   //AUTHORIZE TRANSACTIONS
   const authorizeTransaction = transaction => {
@@ -188,38 +214,42 @@ const AuthMenu = () => {
   //EXECUTE TRANSACTION 
 const sendTransaction = () => { 
 
-    if(authorize) {
-      const authorizeArr = authorize.map((item) => {
-        const sendTransaction = doc(db, 'transaction', item.row.docId);
+    const authorizeTransactions = data.filter((item) => item.isAuthorized === true)
+    const rejectedTransactions = data.filter((item) => item.isRejected === true)
+
+    if(authorizeTransactions){
+      const authorizeArr = authorizeTransactions.map((item) => {
+        const sendTransaction = doc(db, 'transaction', item.docId);
     
           updateDoc(sendTransaction, {
             status: 'aprobada',
-          });
+          }); 
        })
-    } 
-    
-   if(reject) {
-      const rejectArr = reject.map((item) => {
-        const sendTransaction = doc(db, 'transaction', item.row.docId);
+    }
+     
+    if(rejectedTransactions){
+      const rejectedArr = rejectedTransactions.map((item) => {
+        const sendTransaction = doc(db, 'transaction', item.docId);
     
           updateDoc(sendTransaction, {
             status: 'rechazada',
-          });
+          }); 
        })
-    } 
+    }
   }; 
 
   return (
     <div>
       <h2>Autorizar Transacciones Multiempresa: </h2>
-      <p>Autorizadas:{authorize.length}</p>
-      <div style={{ height: 350, width: '75%' }}>
-        <DataGrid
+      <div style={{ height: 450, width: '72%' }}>
+        <DataGrid 
+          rowHeight={25}
           columns={columns}
           rows={pendingTransactions}
-          pageSize={5}
+          pageSize={20}
           sx={{
             boxShadow: 2,
+            fontSize: 12,
             border: 2,
             m: 2,
             borderColor: '#ffb64c',
