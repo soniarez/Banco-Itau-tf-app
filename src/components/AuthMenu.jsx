@@ -4,9 +4,11 @@ import { DataGrid } from '@mui/x-data-grid';
 import Checkbox from '@mui/material/Checkbox';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+import '../../src/App.css';
 
 const AuthMenu = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); //Setea nuestra data
+  const [selectionModel, setSelectionModel] = useState([]); //Para el checkbox cuadrito, que escucha todos los cambios. Se llama selectionModel: https://mui.com/x/react-data-grid/selection/
 
   const columns = [
     {
@@ -50,6 +52,24 @@ const AuthMenu = () => {
       width: 130,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      renderCell: params => {
+        return (
+          <div>
+            {data ? (
+              <div> 
+                {/* Este checkbox es el componente de las tablas, los botoncitos redondos, que se agregan con esa propiedad de renderCell para agregarlos en cada fila: https://mui.com/material-ui/react-checkbox/ */}
+                <Checkbox
+                  size="small"
+                  icon={<RadioButtonUncheckedIcon />}
+                  checkedIcon={<RadioButtonCheckedIcon />}
+                />
+              </div>
+            ) : (
+              <p>Data is loading...</p>
+            )}
+          </div>
+        );
+      },
     },
     {
       field: 'autorize',
@@ -114,7 +134,6 @@ const AuthMenu = () => {
   useEffect(() => {
     onSnapshot(collection(db, 'transaction'), snapshot => {
       const dataFromFirestore = snapshot.docs.map(doc => {
-        //console.log(doc.data())
         return doc.data();
       });
       setData(dataFromFirestore);
@@ -127,7 +146,14 @@ const AuthMenu = () => {
     <div>
       <h2>Autorizar Transacciones Multiempresa</h2>
       <div style={{ height: 350, width: '75%' }}>
-        <DataGrid
+        {/*DataGrid es el componte tabla*/}
+        {/*checkboxSelection: Este prop de checkboxSelection es el que hace que aparezca el checkbox cuadrado, y lo de abajo es lo que se le pasa para que escuche cada cambio: https://mui.com/x/react-data-grid/selection/*/}
+        <DataGrid 
+          checkboxSelection 
+          onSelectionModelChange={newSelectionModel => {
+            setSelectionModel(newSelectionModel);
+          }}
+          selectionModel={selectionModel}
           columns={columns}
           rows={data}
           pageSize={5}
