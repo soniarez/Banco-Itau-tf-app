@@ -14,7 +14,9 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.1",
     "@mui/x-data-grid": "^5.15.3",
+    "apexcharts": "^3.35.5",
     "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
