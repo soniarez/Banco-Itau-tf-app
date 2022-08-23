@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const NavBar = () => {
   return (
     <nav className="bg-[#FFFFFF] h-[100px] flex flex-wrap w-full items-center py-2 border-b-2 border-[#EFE9E5] box-border pb-4 shadow-lg justify-between">
