@@ -4,6 +4,8 @@ import {
   collection,
   addDoc,
   onSnapshot,
+  updateDoc,
+  doc,
 } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js';
 import config from './config';
 import { getFormatCurrency } from '../utility/currencychange';
@@ -482,4 +484,4 @@ const db = getFirestore(app);
 //     });
 // });
 
-export { app, db, collection, onSnapshot };
+export { app, db, collection, onSnapshot, updateDoc, doc };
