@@ -52,14 +52,14 @@ const AuthMenu = () => {
       width: 130,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      renderCell: params => {
+      renderCell: (params) => {
         return (
           <div>
             {data ? (
-              <div> 
+              <div>
                 {/* Este checkbox es el componente de las tablas, los botoncitos redondos, que se agregan con esa propiedad de renderCell para agregarlos en cada fila: https://mui.com/material-ui/react-checkbox/ */}
                 <Checkbox
-                  size="small"
+                  size='small'
                   icon={<RadioButtonUncheckedIcon />}
                   checkedIcon={<RadioButtonCheckedIcon />}
                 />
@@ -77,13 +77,13 @@ const AuthMenu = () => {
       width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      renderCell: params => {
+      renderCell: (params) => {
         return (
           <div>
             {data ? (
               <div>
                 <Checkbox
-                  size="small"
+                  size='small'
                   icon={<RadioButtonUncheckedIcon />}
                   checkedIcon={<RadioButtonCheckedIcon />}
                   sx={{
@@ -106,13 +106,13 @@ const AuthMenu = () => {
       width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      renderCell: params => {
+      renderCell: (params) => {
         return (
           <div>
             {data ? (
               <div>
                 <Checkbox
-                  size="small"
+                  size='small'
                   icon={<RadioButtonUncheckedIcon />}
                   checkedIcon={<RadioButtonCheckedIcon />}
                   sx={{
@@ -132,15 +132,13 @@ const AuthMenu = () => {
   ];
 
   useEffect(() => {
-    onSnapshot(collection(db, 'transaction'), snapshot => {
-      const dataFromFirestore = snapshot.docs.map(doc => {
+    onSnapshot(collection(db, 'transaction'), (snapshot) => {
+      const dataFromFirestore = snapshot.docs.map((doc) => {
         return doc.data();
       });
       setData(dataFromFirestore);
     });
   }, []);
-
-  //console.log(data, "data")
 
   return (
     <div>
@@ -148,9 +146,9 @@ const AuthMenu = () => {
       <div style={{ height: 350, width: '75%' }}>
         {/*DataGrid es el componte tabla*/}
         {/*checkboxSelection: Este prop de checkboxSelection es el que hace que aparezca el checkbox cuadrado, y lo de abajo es lo que se le pasa para que escuche cada cambio: https://mui.com/x/react-data-grid/selection/*/}
-        <DataGrid 
-          checkboxSelection 
-          onSelectionModelChange={newSelectionModel => {
+        <DataGrid
+          checkboxSelection
+          onSelectionModelChange={(newSelectionModel) => {
             setSelectionModel(newSelectionModel);
           }}
           selectionModel={selectionModel}
