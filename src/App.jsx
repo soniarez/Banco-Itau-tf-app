@@ -8,10 +8,11 @@ import './index.css';
 function App() {
   return (
     <div>
+      <NavBar />
       <div className="main-grid">
         <SideBar />
         <div>
-          <NavBar />
+          
           <Center />
         </div>
       </div>
