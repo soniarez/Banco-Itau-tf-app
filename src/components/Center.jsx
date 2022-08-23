@@ -7,7 +7,7 @@ const Center = () => {
     <div>
       <div className="flex flex-col">
         <AuthMenu />
-        <DashboardMulti />
+        {/* <DashboardMulti /> */}
       </div>
     </div>
   );
