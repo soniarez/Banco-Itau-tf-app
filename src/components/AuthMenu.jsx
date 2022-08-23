@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import {onSnapshot, collection, db} from '../firebase/init'; 
 
 const AuthMenu = () => {
-  const [tableData, setTableData] = useState([]);
+  const [data, setData] = useState([]);
 
   const columns = [
     {
@@ -20,8 +21,8 @@ const AuthMenu = () => {
       headerClassName: 'my-app',
     },
     {
-      field: 'origin',
-      headerName: 'Cta Origen',
+      field: 'origen',
+      headerName: 'Cuenta Origen',
       width: 130,
       headerAlign: 'center',
       headerClassName: 'my-app',
@@ -61,69 +62,22 @@ const AuthMenu = () => {
       width: 100,
       headerAlign: 'center',
       headerClassName: 'my-app',
-    },
+    }, 
   ];
 
   useEffect(() => {
-    const rows = [
-      {
-        id: 1,
-        date: 'lunes',
-        company: 'company1',
-        origin: 1,
-        solution: 'remuneracion',
-        amount: 25,
-        details: '',
-        autorize: '',
-        reject: '',
-      },
-      {
-        id: 2,
-        date: 'martes',
-        company: 'company2',
-        origin: 2,
-        solution: 'prestamo',
-        amount: 12,
-        details: '',
-        autorize: '',
-        reject: '',
-      },
-      {
-        id: 3,
-        date: 'miercoles',
-        company: 'company3',
-        origin: 3,
-        solution: 'remuneracion',
-        amount: 40,
-        details: '',
-        autorize: '',
-        reject: '',
-      },
-      {
-        id: 4,
-        date: 'jueves',
-        company: 'company4',
-        origin: 4,
-        solution: 'recibos',
-        amount: 18,
-        details: '',
-        autorize: '',
-        reject: '',
-      },
-      {
-        id: 5,
-        date: 'viernes',
-        company: 'company5',
-        origin: 5,
-        solution: 'prestamo',
-        amount: 20,
-        details: '',
-        autorize: '',
-        reject: '',
-      },
-    ];
-    setTableData(rows);
-  }, []);
+    onSnapshot(collection(db, "transaction"), (snapshot) => {
+      const dataFromFirestore = snapshot.docs.map((doc) => {
+        //console.log(doc.data())
+        return doc.data();
+      })
+      setData(dataFromFirestore);
+    })
+
+  }, [])
+
+  //console.log(data, "data")
+
 
   return (
     <div>
@@ -131,7 +85,7 @@ const AuthMenu = () => {
       <div style={{ height: 350, width: '65%' }} >
         <DataGrid
           columns={columns}
-          rows={tableData}
+          rows={data}
           pageSize={5}
           sx={{
             boxShadow: 2,
