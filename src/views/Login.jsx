@@ -1,11 +1,11 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const Login = () => {
-    const [user, setUser] = useState('');
-    const [password, setPassword] = useState('')
+  const [user, setUser] = useState('');
+  const [password, setPassword] = useState('');
 
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
     const login = (user, password) => {
         if (user === '768946575' && password === '123456'){
@@ -60,13 +60,38 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            <footer className='bg-[#003767] inset-x-0 bottom-0 p-4 flex items-center justify-center h-12 fixed'>
-                <div className="text-[#EEEEEE]">
-                    <p>¿En qué te podemos ayudar?<a href="callto://600 6860 888" className="mx-2"><strong>☎ 600 6860 888 </strong></a> Llámanos e ingresa el Rut de tu Empresa</p>
-                </div>
-            </footer>
-        </>
-    );
-}
+          </form>
+          <section className='mt-6 flex items-center justify-center flex-col'>
+            <div className='w-36 flex group justify-center items-center'>
+              <a
+                href='#'
+                className='text-[#007ab7] group-hover:text-[#0D47A1] text-sm m-0 '
+              >
+                {' '}
+                ¿Olvidaste tu clave?
+              </a>
+            </div>
+          </section>
+          <div className='flex group mt-5'>
+            <button className='bg-[#EEEEEE] backdrop-blur-xl bg-opacity-70 border-[#DFE6EE] border text-[#007AB7] h-10 w-full text-sm rounded-xl hover:bg-[#003767] group-hover:text-[#EEEEEE] group-hover:border-[#003767] mt-3'>
+              ¿Aun no tienes tu clave?
+            </button>
+          </div>
+        </div>
+      </div>
+      <footer className='bg-[#003767] inset-x-0 bottom-0 p-4 flex items-center justify-center h-12 fixed'>
+        <div className='text-[#EEEEEE]'>
+          <p>
+            ¿En qué te podemos ayudar?
+            <a href='callto://600 6860 888' className='mx-2'>
+              <strong>☎ 600 6860 888 </strong>
+            </a>{' '}
+            Llámanos e ingresa el Rut de tu Empresa
+          </p>
+        </div>
+      </footer>
+    </>
+  );
+};
 
-export default Login
+export default Login;

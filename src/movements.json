@@ -6,7 +6,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "01/02/2022",
@@ -15,7 +16,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "01/03/2022",
@@ -24,7 +26,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "01/04/2022",
@@ -33,7 +36,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "01/05/2022",
@@ -42,7 +46,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "01/06/2022",
@@ -51,7 +56,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "01/07/2022",
@@ -60,7 +66,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Cargo": "100",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "01/08/2022",
@@ -69,7 +76,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "01/09/2022",
@@ -78,7 +86,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "01/10/2022",
@@ -87,7 +96,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "01/11/2022",
@@ -96,7 +106,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "02/01/2022",
@@ -105,7 +116,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "02/02/2022",
@@ -114,7 +126,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "02/03/2022",
@@ -123,7 +136,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "02/04/2022",
@@ -132,7 +146,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "02/05/2022",
@@ -141,7 +156,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "02/06/2022",
@@ -150,7 +166,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "02/07/2022",
@@ -159,7 +176,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Cargo": "100",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "02/08/2022",
@@ -168,7 +186,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "02/09/2022",
@@ -177,7 +196,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "02/10/2022",
@@ -186,7 +206,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "02/11/2022",
@@ -195,7 +216,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "03/01/2022",
@@ -204,7 +226,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "03/02/2022",
@@ -213,7 +236,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "03/03/2022",
@@ -222,7 +246,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "03/04/2022",
@@ -231,7 +256,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "03/05/2022",
@@ -240,7 +266,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "03/06/2022",
@@ -249,7 +276,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "03/07/2022",
@@ -258,7 +286,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Cargo": "100",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "03/08/2022",
@@ -267,7 +296,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "03/09/2022",
@@ -276,7 +306,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "03/10/2022",
@@ -285,7 +316,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "03/11/2022",
@@ -294,7 +326,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "04/01/2022",
@@ -303,7 +336,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "04/02/2022",
@@ -312,7 +346,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "04/03/2022",
@@ -321,7 +356,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "04/04/2022",
@@ -330,7 +366,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "04/05/2022",
@@ -339,7 +376,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "04/06/2022",
@@ -348,7 +386,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "04/07/2022",
@@ -357,7 +396,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Cargo": "100",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "04/08/2022",
@@ -366,7 +406,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "04/09/2022",
@@ -375,7 +416,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "04/10/2022",
@@ -384,7 +426,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "04/11/2022",
@@ -393,7 +436,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "05/01/2022",
@@ -402,7 +446,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "05/02/2022",
@@ -411,7 +456,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "05/03/2022",
@@ -420,7 +466,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "05/04/2022",
@@ -429,7 +476,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "05/05/2022",
@@ -438,7 +486,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "05/06/2022",
@@ -447,7 +496,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "05/07/2022",
@@ -456,7 +506,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Cargo": "100",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "05/08/2022",
@@ -465,7 +516,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "05/09/2022",
@@ -474,7 +526,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "05/10/2022",
@@ -483,7 +536,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "05/11/2022",
@@ -492,7 +546,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "06/01/2022",
@@ -501,7 +556,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "06/02/2022",
@@ -510,7 +566,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "06/03/2022",
@@ -519,7 +576,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "06/04/2022",
@@ -528,7 +586,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "06/05/2022",
@@ -537,7 +596,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "06/06/2022",
@@ -546,7 +606,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "06/07/2022",
@@ -555,7 +616,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Cargo": "100",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "06/08/2022",
@@ -564,7 +626,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "06/09/2022",
@@ -573,7 +636,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "06/10/2022",
@@ -582,7 +646,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "06/11/2022",
@@ -591,7 +656,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "07/01/2022",
@@ -600,7 +666,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "07/02/2022",
@@ -609,7 +676,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "07/03/2022",
@@ -618,7 +686,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "07/04/2022",
@@ -627,7 +696,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "07/05/2022",
@@ -636,7 +706,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "07/06/2022",
@@ -645,7 +716,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "07/07/2022",
@@ -654,7 +726,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Cargo": "100",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "07/08/2022",
@@ -663,7 +736,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "07/09/2022",
@@ -672,7 +746,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "07/10/2022",
@@ -681,7 +756,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "07/11/2022",
@@ -690,7 +766,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "08/01/2022",
@@ -699,7 +776,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "08/02/2022",
@@ -708,7 +786,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "08/03/2022",
@@ -717,7 +796,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "08/04/2022",
@@ -726,7 +806,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "08/05/2022",
@@ -735,7 +816,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "08/06/2022",
@@ -744,7 +826,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "08/07/2022",
@@ -753,7 +836,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Cargo": "100",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "08/08/2022",
@@ -762,7 +846,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "08/09/2022",
@@ -771,7 +856,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "08/10/2022",
@@ -780,7 +866,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "08/11/2022",
@@ -789,7 +876,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "09/01/2022",
@@ -798,7 +886,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "09/02/2022",
@@ -807,7 +896,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "09/03/2022",
@@ -816,7 +906,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "09/04/2022",
@@ -825,7 +916,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "09/05/2022",
@@ -834,7 +926,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "09/06/2022",
@@ -843,7 +936,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "09/07/2022",
@@ -852,7 +946,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Cargo": "100",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "09/08/2022",
@@ -861,7 +956,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "09/09/2022",
@@ -870,7 +966,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "09/10/2022",
@@ -879,7 +976,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "09/11/2022",
@@ -888,7 +986,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "10/01/2022",
@@ -897,7 +996,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "10/02/2022",
@@ -906,7 +1006,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "10/03/2022",
@@ -915,7 +1016,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "10/04/2022",
@@ -924,7 +1026,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "10/05/2022",
@@ -933,7 +1036,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "10/06/2022",
@@ -942,7 +1046,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "10/07/2022",
@@ -951,7 +1056,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Cargo": "100",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "10/08/2022",
@@ -960,7 +1066,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "10/09/2022",
@@ -969,7 +1076,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "10/10/2022",
@@ -978,7 +1086,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "10/11/2022",
@@ -987,7 +1096,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "11/01/2022",
@@ -996,7 +1106,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "11/02/2022",
@@ -1005,7 +1116,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "11/03/2022",
@@ -1014,7 +1126,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "11/04/2022",
@@ -1023,7 +1136,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "11/05/2022",
@@ -1032,7 +1146,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "11/06/2022",
@@ -1041,7 +1156,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "11/07/2022",
@@ -1050,7 +1166,7 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "11/08/2022",
@@ -1059,7 +1175,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "11/09/2022",
@@ -1068,7 +1185,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "11/10/2022",
@@ -1077,7 +1195,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "11/11/2022",
@@ -1086,7 +1205,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "12/01/2022",
@@ -1095,7 +1215,8 @@
     "Descripcion": "ABONO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": "2000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "12/02/2022",
@@ -1104,7 +1225,8 @@
     "Descripcion": "ABONO PAGO DE PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": "1000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "12/03/2022",
@@ -1113,7 +1235,8 @@
     "Descripcion": "ABONO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": "5000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "12/04/2022",
@@ -1122,7 +1245,8 @@
     "Descripcion": "ABONO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "12/05/2022",
@@ -1131,7 +1255,8 @@
     "Descripcion": "CARGO TRANSFERENCIA INTERNET",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "3000000"
+    "Cargo": "3000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "12/06/2022",
@@ -1140,7 +1265,8 @@
     "Descripcion": "PAGO PREVIRED",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "1"
+    "Cargo": "1",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "12/07/2022",
@@ -1149,7 +1275,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "100"
+    "Cargo": "100",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "12/08/2022",
@@ -1158,7 +1285,8 @@
     "Descripcion": "PAGO EFECTUADO A PROVEEDORES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "500000000"
+    "Cargo": "500000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "12/09/2022",
@@ -1167,7 +1295,8 @@
     "Descripcion": "CARGO PAGO DE REMUNERACIONES H2H",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "7000000000"
+    "Cargo": "7000000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "12/10/2022",
@@ -1176,7 +1305,8 @@
     "Descripcion": "CARGO MANUAL DE COMEX",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "2765987"
+    "Cargo": "2765987",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "12/11/2022",
@@ -1185,7 +1315,8 @@
     "Descripcion": "CARGO TRANSFERENCIA SPAV",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "300000000"
+    "Cargo": "300000000",
+    "Currencycode": "CLP"
   },
   {
     "Fecha y Hora": "01-01-2022",
@@ -1194,7 +1325,8 @@
     "Descripcion": "COMPRA DOLARES",
     "Sucursal": "Operaciones Web",
     "Abono": "10000000",
-    "Cargo": " "
+    "Cargo": " ",
+    "Currencycode": "USD"
   },
   {
     "Fecha y Hora": "02-01-2022",
@@ -1203,6 +1335,7 @@
     "Descripcion": "VENTA DOLARES",
     "Sucursal": "Operaciones Web",
     "Abono": " ",
-    "Cargo": "10000000"
+    "Cargo": "10000000",
+    "Currencycode": "USD"
   }
 ]
