@@ -19,7 +19,6 @@ const Footer = () => {
         <a href="https://cl.linkedin.com/company/itauchile" className="fa-brands fa-linkedin buttons" target="_blank" rel="noreferrer" aria-label="Linkedin"></a>
         <a href="https://www.tiktok.com/@itauchile?lang=es" className="fa-brands fa-tiktok buttons" target="_blank" rel="noreferrer" aria-label="TikTok"></a>
       </ol>
-
     </div>
   )
 }
