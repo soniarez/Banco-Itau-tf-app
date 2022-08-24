@@ -1,16 +1,71 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
-import { DataGrid } from '@mui/x-data-grid';
+import {
+  DataGrid,
+  GridToolbar,
+  esES,
+} from '@mui/x-data-grid';
 import Checkbox from '@mui/material/Checkbox';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AuthMenuChart from './AuthMenuChart';
 import '../../src/App.css';
 
 const AuthMenu = () => {
   const [data, setData] = useState([]);
-  //const [authorize, setAuthorize] = useState([]);
-  //const [reject, setReject] = useState([]);
+
+  const dummy = [
+    {
+      amount: 'CLP 23.000.000',
+      company: 'Inversiones Latinoamericanas',
+      date: '02-01-2022 09:00 Hrs',
+      docId: 'Vo812X6EJTkmaSVcQQDh',
+      id: '4f3c79526c34',
+      isAuthorized: false,
+      isRejected: false,
+      origen: '229435678',
+      solution: 'Pago de Tesoreria Gral. Republica',
+      status: 'pendiente',
+    },
+    {
+      amount: 'CLP 450.000',
+      company: 'Inversiones Latinoamericanas',
+      date: '03-01-2022 15:56 Hrs',
+      docId: 'bPwlEp0Sf34WybbQ4ihX',
+      id: '27574c139db3b',
+      isAuthorized: false,
+      isRejected: false,
+      origen: '229435678',
+      solution: 'Transferencias entre Cuentas',
+      status: 'pendiente',
+    },
+    {
+      amount: 'CLP 6.000.000',
+      company: 'MegaHold Prime',
+      date: '02-01-2022 09:00 Hrs',
+      docId: 'cvCvIaztpJYzOS6OGDlF',
+      id: 'dde458581a341',
+      isAuthorized: false,
+      isRejected: false,
+      origen: '210456783',
+      solution: 'Boleta de Garantia',
+      status: 'pendiente',
+    },
+    {
+      amount: 'USD 10,000,000',
+      company: 'MegaHold Prime',
+      date: '03-01-2022 11:11 Hrs',
+      docId: 'eKWOh6yP4SIc6Xe7qDDa',
+      id: '30bf5ef80813b',
+      isAuthorized: false,
+      isRejected: false,
+      origen: '210456783',
+      solution: 'Pago de Impuestos Dolares',
+      status: 'pendiente',
+    },
+  ];
 
   const columns = [
     {
@@ -19,6 +74,7 @@ const AuthMenu = () => {
       width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'justify',
     },
     {
       field: 'company',
@@ -26,6 +82,7 @@ const AuthMenu = () => {
       width: 200,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'justify',
     },
     {
       field: 'origen',
@@ -33,6 +90,7 @@ const AuthMenu = () => {
       width: 130,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'center',
     },
     {
       field: 'solution',
@@ -40,6 +98,7 @@ const AuthMenu = () => {
       width: 130,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'justify',
     },
     {
       field: 'amount',
@@ -47,6 +106,7 @@ const AuthMenu = () => {
       width: 170,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'center',
     },
     {
       field: 'details',
@@ -54,15 +114,21 @@ const AuthMenu = () => {
       width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      renderCell: (params) => {
+      align: 'center',
+      renderCell: params => {
         return (
           <div>
             {data ? (
               <div>
                 <Checkbox
-                  size='small'
-                  icon={<RadioButtonUncheckedIcon />}
-                  checkedIcon={<RadioButtonCheckedIcon />}
+                  size="small"
+                  icon={<ExpandMoreIcon />}
+                  checkedIcon={<ExpandMoreIcon />}
+                  sx={{
+                    '&.Mui-checked': {
+                      color: '#F1AE2F',
+                    },
+                  }}
                 />
               </div>
             ) : (
@@ -75,19 +141,19 @@ const AuthMenu = () => {
     {
       field: 'autorize',
       headerName: 'Autorizar',
-      width: 100,
+      width: 190,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'center',
       renderCell: (params) => {
         return (
           <div>
             {data ? (
               <div>
                 <Checkbox
-                  // onClick={() => authorizeTransaction(params)}
-                  onChange={(e) => handleChange(e, params.row.docId)}
+                  onChange={e => handleChangeAuthorized(e, params.row.docId)}
                   checked={params.row.isAuthorized}
-                  size='small'
+                  size="small"
                   sx={{
                     '&.Mui-checked': {
                       color: '#5db761',
@@ -108,15 +174,16 @@ const AuthMenu = () => {
       width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      renderCell: (params) => {
+      align: 'center',
+      renderCell: params => {
         return (
           <div>
             {data ? (
               <div>
                 <Checkbox
-                  onChange={(e) => handleChangeRejected(e, params.row.docId)}
+                  onChange={e => handleChangeRejected(e, params.row.docId)}
                   checked={params.row.isRejected}
-                  size='small'
+                  size="small"
                   sx={{
                     '&.Mui-checked': {
                       color: '#f44336',
@@ -135,8 +202,8 @@ const AuthMenu = () => {
 
   //GETTING DATA FROM FIREBASE
   useEffect(() => {
-    onSnapshot(collection(db, 'transaction'), (snapshot) => {
-      const dataFromFirestore = snapshot.docs.map((doc) => {
+    onSnapshot(collection(db, 'transaction'), snapshot => {
+      const dataFromFirestore = snapshot.docs.map(doc => {
         return {
           docId: doc.id,
           isAuthorized: false,
@@ -148,10 +215,10 @@ const AuthMenu = () => {
     });
   }, []);
 
-  //HANDLECHANGE
-  const handleChange = (e, docId) => {
-    setData((prevState) => [
-      ...prevState.map((element) => {
+  //HANDLECHANGE AUTHORIZE
+  const handleChangeAuthorized = (e, docId) => {
+    setData(prevState => [
+      ...prevState.map(element => {
         return element.docId === docId
           ? {
               ...element,
@@ -162,10 +229,10 @@ const AuthMenu = () => {
     ]);
   };
 
-  //HANDLECHANGE
+  //HANDLECHANGE REJECT
   const handleChangeRejected = (e, docId) => {
-    setData((prevState) => [
-      ...prevState.map((element) => {
+    setData(prevState => [
+      ...prevState.map(element => {
         return element.docId === docId
           ? {
               ...element,
@@ -176,58 +243,20 @@ const AuthMenu = () => {
     ]);
   };
 
-  //AUTHORIZE TRANSACTIONS
-  const authorizeTransaction = (transaction) => {
-    const isTransactionPresent = authorize.some(
-      (item) => item.id === transaction.id
-    );
-    if (isTransactionPresent) {
-      const updateAuthorize = authorize.map((item) => {
-        if (item.id === transaction.id) {
-          return { ...item, count: --item.count };
-        }
-        return item;
-      });
-      setAuthorize(updateAuthorize);
-    } else {
-      setAuthorize([...authorize, { ...transaction, count: 1 }]);
-    }
-  };
-
-  //REJECT TRANSACTIONS
-  const rejectTransaction = (transaction) => {
-    const isTransactionPresent = reject.some(
-      (item) => item.id === transaction.id
-    );
-    if (isTransactionPresent) {
-      const updateReject = reject.map((item) => {
-        if (item.id === transaction.id) {
-          return { ...item, count: --item.count };
-        }
-        return item;
-      });
-      setReject(updateReject);
-    } else {
-      setReject([...reject, { ...transaction, count: 1 }]);
-    }
-  };
-
   //FILTERING PENDING
-  const pendingTransactions = data.filter((item) => {
+  const pendingTransactions = data.filter(item => {
     return item.status === 'pendiente';
   });
 
   //EXECUTE TRANSACTION
   const sendTransaction = () => {
     const authorizeTransactions = data.filter(
-      (item) => item.isAuthorized === true
+      item => item.isAuthorized === true
     );
-    const rejectedTransactions = data.filter(
-      (item) => item.isRejected === true
-    );
+    const rejectedTransactions = data.filter(item => item.isRejected === true);
 
     if (authorizeTransactions) {
-      const authorizeArr = authorizeTransactions.map((item) => {
+      const authorizeArr = authorizeTransactions.map(item => {
         const sendTransaction = doc(db, 'transaction', item.docId);
 
         updateDoc(sendTransaction, {
@@ -237,7 +266,7 @@ const AuthMenu = () => {
     }
 
     if (rejectedTransactions) {
-      const rejectedArr = rejectedTransactions.map((item) => {
+      const rejectedArr = rejectedTransactions.map(item => {
         const sendTransaction = doc(db, 'transaction', item.docId);
         updateDoc(sendTransaction, {
           status: 'rechazada',
@@ -249,17 +278,30 @@ const AuthMenu = () => {
   return (
     <div>
       <h2>Autorizar Transacciones Multiempresa: </h2>
+      <div className="flex flex-row justify-evenly">
+        <button>Aceptar Todo</button>
+        <button>Rechazar Todo</button>
+      </div>
       <div style={{ height: 450, width: '72%' }}>
         <DataGrid
           rowHeight={25}
           columns={columns}
           rows={pendingTransactions}
-          pageSize={20}
+          pageSize={12}
+          components={{ Toolbar: GridToolbar }}
+          componentsProps={{
+            toolbar: {
+              showQuickFilter: true,
+              quickFilterProps: { debounceMs: 500 },
+            },
+          }}
+          localeText={esES.components.MuiDataGrid.defaultProps.localeText}
           sx={{
             boxShadow: 2,
             fontSize: 12,
             border: 2,
             m: 2,
+            textAlign: 'center',
             borderColor: '#ffb64c',
             '& .MuiDataGrid-cell:hover': {
               color: '#ffb64c',
@@ -268,7 +310,7 @@ const AuthMenu = () => {
               bgcolor: '#B4B4B4',
             },
           }}
-          getRowClassName={(params) => `itau-app-${params.row.amount}`}
+          getRowClassName={params => `itau-app-${params.row.amount}`}
         />
       </div>
       <button onClick={() => sendTransaction()}>Ejecutar</button>
