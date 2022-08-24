@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom";
 
 
 const NavBar = () => {
-  const navigate = useNavigate();
+  /* const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem('business')
     localStorage.removeItem('user')
@@ -12,7 +12,7 @@ const NavBar = () => {
   };
 
   const business = window.localStorage.business
-  const user = window.localStorage.user
+  const user = window.localStorage.user */
 
   return (
     <nav className="bg-[#FFFFFF] h-[100px] w-screen flex flex-wrap items-center py-2 border-b-2 border-[#EFE9E5] box-border pb-4 shadow-lg justify-between">
@@ -27,7 +27,7 @@ const NavBar = () => {
             <a className='bg-[#EEEEEE] rounded-[100%] h-10 w-10 flex items-center justify-center mr-2' >
               <img className="py-2 h-[35px]" src="src/img/empresa.png" alt="Logo Empresa" />
             </a>
-            <h1 className='text-[#EC7000] text-sm font-bold font-sans'>{business}</h1>
+            {/* <h1 className='text-[#EC7000] text-sm font-bold font-sans'>{business}</h1> */}
           </div>
         </section>
       </div>
@@ -39,7 +39,7 @@ const NavBar = () => {
           <a className='bg-[#EEEEEE] rounded-[100%] h-10 w-10 flex items-center justify-center mr-2' >
             <img className="py-2 h-8" src="src/img/user.png" alt="Logo Usuario" />
           </a>
-          <h1 className='text-sm font-bold font-sans mr-20'>{user}</h1>
+          {/* <h1 className='text-sm font-bold font-sans mr-20'>{user}</h1> */}
         </section>
         <button onClick={handleLogout} className='bg-[#ff002b] text-[#FFFFFF] text-sm h-[35px] w-[70px] rounded-2xl font-bold'>Salir</button>
       </div>
