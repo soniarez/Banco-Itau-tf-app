@@ -79,7 +79,7 @@ const AuthMenu = () => {
     {
       field: 'company',
       headerName: 'Empresa',
-      width: 200,
+      width: 170,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'justify',
@@ -87,7 +87,7 @@ const AuthMenu = () => {
     {
       field: 'origen',
       headerName: 'Cuenta Origen',
-      width: 130,
+      width: 110,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -95,7 +95,7 @@ const AuthMenu = () => {
     {
       field: 'solution',
       headerName: 'Solución',
-      width: 130,
+      width: 168,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'justify',
@@ -103,7 +103,7 @@ const AuthMenu = () => {
     {
       field: 'amount',
       headerName: 'Monto',
-      width: 170,
+      width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -111,7 +111,7 @@ const AuthMenu = () => {
     {
       field: 'details',
       headerName: 'Detalles',
-      width: 100,
+      width: 70,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -141,7 +141,7 @@ const AuthMenu = () => {
     {
       field: 'autorize',
       headerName: 'Autorizar',
-      width: 190,
+      width: 65,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -171,7 +171,7 @@ const AuthMenu = () => {
     {
       field: 'reject',
       headerName: 'Rechazar',
-      width: 100,
+      width: 65,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -282,12 +282,12 @@ const AuthMenu = () => {
         <button>Aceptar Todo</button>
         <button>Rechazar Todo</button>
       </div>
-      <div style={{ height: 450, width: '72%' }}>
+      <div style={{ height: 450, width: '88%' }}>
         <DataGrid
           rowHeight={25}
           columns={columns}
           rows={pendingTransactions}
-          pageSize={12}
+          pageSize={10}
           components={{ Toolbar: GridToolbar }}
           componentsProps={{
             toolbar: {
@@ -298,14 +298,9 @@ const AuthMenu = () => {
           localeText={esES.components.MuiDataGrid.defaultProps.localeText}
           sx={{
             boxShadow: 2,
-            fontSize: 12,
-            border: 2,
+            fontSize: 11,
             m: 2,
             textAlign: 'center',
-            borderColor: '#ffb64c',
-            '& .MuiDataGrid-cell:hover': {
-              color: '#ffb64c',
-            },
             '& .itau-app-USD': {
               bgcolor: '#B4B4B4',
             },
