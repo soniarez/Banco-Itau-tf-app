@@ -1672,22 +1672,85 @@ const db = getFirestore(app);
 //   ],
 // };
 
-// export const dataset = movements.data.forEach(function (obj) {
+// let companies = {
+//   data: [
+//     {
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
+//       'Cuenta Corriente': [
+//         { numerocta: '210456783', tipocta: 'Cuenta Pesos' },
+//         { numerocta: '217683922', tipocta: 'Cuenta Pesos' },
+//         { numerocta: '229875367', tipocta: 'Cuenta Pesos' },
+//       ],
+//     },
+//     {
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
+//       'Cuenta Corriente': [
+//         { numerocta: '236748967', tipocta: 'Cuenta Pesos' },
+//         { numerocta: '214536278', tipocta: 'Cuenta Pesos' },
+//         { numerocta: '237849567', tipocta: 'Cuenta Pesos' },
+//       ],
+//     },
+//     {
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
+//       'Cuenta Corriente': [
+//         { numerocta: '223987454', tipocta: 'Cuenta Pesos' },
+//         { numerocta: '223764839', tipocta: 'Cuenta Pesos' },
+//         { numerocta: '211235678', tipocta: 'Cuenta Pesos' },
+//       ],
+//     },
+//     {
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
+//       'Cuenta Corriente': [
+//         { numerocta: '229435678', tipocta: 'Cuenta Pesos' },
+//         { numerocta: '220674598', tipocta: 'Cuenta Pesos' },
+//         { numerocta: '226354968', tipocta: 'Cuenta Pesos' },
+//       ],
+//     },
+//     {
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
+//       'Cuenta Corriente': [
+//         { numerocta: '215364789', tipocta: 'Cuenta Pesos' },
+//         { numerocta: '126473890', tipocta: 'Cuenta Pesos' },
+//         { numerocta: '223647891', tipocta: 'Cuenta Pesos' },
+//       ],
+//     },
+//     {
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
+//       'Cuenta Corriente': [
+//         { numerocta: '362925378', tipocta: 'Cuenta Dolar' },
+//         { numerocta: '224637807', tipocta: 'Cuenta Pesos' },
+//         { numerocta: '223564738', tipocta: 'Cuenta Pesos' },
+//       ],
+//     },
+//   ],
+// };
+
+// export const dataset = companies.data.forEach(function (obj) {
 //   const postId = Math.random().toString(16).slice(2);
-//   addDoc(collection(db, 'movements'), {
+//   addDoc(collection(db, 'companies'), {
 //     id: postId,
-//     date: obj.fecha,
-//     codemov: obj.codigomovimiento,
-//     description: obj.descripcion,
-//     branch: obj.sucursal,
-//     payment: `${obj.currencycode} ${getFormatCurrency(
-//       obj.abono,
-//       obj.currencycode
-//     )}`,
-//     charge: `${obj.currencycode} ${getFormatCurrency(
-//       obj.cargo,
-//       obj.currencycode
-//     )}`,
+//     rut: obj.Rut,
+//     'Razon Social': obj['Razon Social'],
+//     segment: obj.Segmento,
+//     accounts: obj['Cuenta Corriente'],
+//     // payment: obj.abono
+//     //   ? `${obj.currencycode} ${getFormatCurrency(obj.abono, obj.currencycode)}`
+//     //   : '-',
+//     // charge: obj.cargo
+//     //   ? `${obj.currencycode} ${getFormatCurrency(obj.cargo, obj.currencycode)}`
+//     //   : '-',
 //   })
 //     .then(function (docRef) {
 //       console.log('Document written with ID: ', docRef.id);
