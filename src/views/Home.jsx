@@ -6,6 +6,7 @@ import WidgetsAuth from '../components/WidgetsAuth';
 import HoldingDonut from '../components/HoldingDonut';
 //import Center from '../components/Center';
 
+
 const Home = () => {
   return (
     <div>
@@ -19,10 +20,8 @@ const Home = () => {
           {/* <Center /> */}
         </div>
       </div>
-
       <Footer />
     </div>
   )
 }
-
 export default Home
