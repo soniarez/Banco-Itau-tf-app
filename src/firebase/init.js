@@ -9,7 +9,7 @@ import {
 } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js';
 import config from './config';
 import { getFormatCurrency } from '../utility/currencychange';
-
+console.log(config)
 // Initialize Firebase
 const app = initializeApp(config);
 
