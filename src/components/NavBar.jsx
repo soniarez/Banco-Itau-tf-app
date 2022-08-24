@@ -3,9 +3,10 @@ import React from 'react';
 
 const NavBar = () => {
   return (
-    <nav className="bg-[#FFFFFF] h-[100px] flex flex-wrap w-full items-center py-2 border-b-2 border-[#EFE9E5] box-border pb-4 shadow-lg justify-between">
+    <nav className="bg-[#FFFFFF] h-[100px] w-screen flex flex-wrap items-center py-2 border-b-2 border-[#EFE9E5] box-border pb-4 shadow-lg justify-between">
+      <div className='flex justify-between items-center w-screen'>
       <div className='flex flex-wrap items-center justify-between'>
-        <section class="flex items-center justify-center">
+        <section className="flex items-center justify-center">
           <a className="mr-4 ml-32">
             <img src="https://d1dzq2r60kxox4.cloudfront.net/uploads/bb9193d2-d4b8-4f76-bcf2-d6e935663c0b/original/header_logo.svg" alt="Logo de Itaú" />
           </a>
@@ -29,6 +30,7 @@ const NavBar = () => {
           <h1 className='text-sm font-bold font-sans mr-20'>Nombre Usuario</h1>
         </section>
         <button className='bg-[#ff002b] text-[#FFFFFF] text-sm h-[35px] w-[70px] rounded-2xl font-bold'>Salir</button>
+      </div>
       </div>
     </nav>
   )

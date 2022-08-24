@@ -15,4 +15,6 @@
   grid-template-rows: 0.1fr 1.7fr 0.1fr;
   gap: 0px 0px;
 }
-
+.buttons{
+  font-size: 26px;
+}
