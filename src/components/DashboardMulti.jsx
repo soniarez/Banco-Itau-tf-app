@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridToolbar,
+  esES } from '@mui/x-data-grid';
 
 const DashboardMulti = () => {
   const [movementsData, setMovementsData] = useState([]);
@@ -12,6 +13,7 @@ const DashboardMulti = () => {
       width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'center',
     },
     {
       field: 'codemov',
@@ -19,6 +21,7 @@ const DashboardMulti = () => {
       width: 200,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'center',
     },
     {
       field: 'description',
@@ -26,6 +29,7 @@ const DashboardMulti = () => {
       width: 130,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'justify',
     },
     {
       field: 'branch',
@@ -33,6 +37,7 @@ const DashboardMulti = () => {
       width: 130,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'center',
     },
     {
       field: 'payment',
@@ -40,6 +45,7 @@ const DashboardMulti = () => {
       width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'justify',
     },
     {
       field: 'charge',
@@ -47,6 +53,7 @@ const DashboardMulti = () => {
       width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
+      align: 'justify',
     },
   ];
 
@@ -72,15 +79,18 @@ const DashboardMulti = () => {
           columns={columns}
           rows={movementsData}
           pageSize={20}
+          components={{ Toolbar: GridToolbar }}
+          componentsProps={{
+            toolbar: {
+              showQuickFilter: true,
+              quickFilterProps: { debounceMs: 500 },
+            },
+          }}
+          localeText={esES.components.MuiDataGrid.defaultProps.localeText}
           sx={{
             boxShadow: 2,
             fontSize: 12,
-            border: 2,
             m: 2,
-            borderColor: '#ffb64c',
-            '& .MuiDataGrid-cell:hover': {
-              color: '#ffb64c',
-            },
             '& .itau-app-USD': {
               bgcolor: '#B4B4B4',
             },
