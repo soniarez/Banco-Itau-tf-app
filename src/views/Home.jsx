@@ -4,6 +4,7 @@ import SideBar from '../components/SideBar';
 import Footer from '../components/Footer';
 //import Center from '../components/Center';
 
+
 const Home = () => {
   return (
     <div>
@@ -15,10 +16,8 @@ const Home = () => {
           {/* <Center /> */}
         </div>
       </div>
-
       <Footer />
     </div>
   )
 }
-
 export default Home
