@@ -37,14 +37,14 @@ const DashboardMulti = () => {
     {
       field: 'payment',
       headerName: 'Abono',
-      width: 170,
+      width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
     },
     {
       field: 'charge',
       headerName: 'Cargo',
-      width: 100,
+      width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
     },

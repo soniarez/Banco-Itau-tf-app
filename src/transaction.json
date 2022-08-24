@@ -1,396 +1,443 @@
-{
-  "transactions": [
-    {
-      "Fecha y Hora": "01-01-2022 22:00 Hrs",
-      "Empresa": "MegaHold Prime",
-      "Cuenta Origen": "210456783",
-      "Solucion": "Pago de Remuneraciones",
-      "Monto": "5000000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "02-01-2022 09:00 Hrs",
-      "Empresa": "Inmobiliaria Velasco",
-      "Cuenta Origen": "236748967",
-      "Solucion": "Pago de Proveedores",
-      "Monto": "200000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 11:11 Hrs",
-      "Empresa": "Inversiones Hacktahon",
-      "Cuenta Origen": "223987454",
-      "Solucion": "Transferencias a Terceros",
-      "Monto": "6000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-02-2022 18:19 Hrs",
-      "Empresa": "Inversiones Latinoamericanas",
-      "Cuenta Origen": "229435678",
-      "Solucion": "Transferencias entre Cuentas",
-      "Monto": "1000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-02-2022 18:19 Hrs",
-      "Empresa": "Supermercados Grupo 44",
-      "Cuenta Origen": "215364789",
-      "Solucion": "Boleta de Garantia",
-      "Monto": "100",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-02-2022 18:19 Hrs",
-      "Empresa": "Universidades Americanas",
-      "Cuenta Origen": "362925378",
-      "Solucion": "Pago de Previred",
-      "Monto": "10",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-02-2022 18:19 Hrs",
-      "Empresa": "MegaHold Prime",
-      "Cuenta Origen": "210456783",
-      "Solucion": "Pago de Impuestos",
-      "Monto": "1",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 15:56 Hrs",
-      "Empresa": "Inmobiliaria Velasco",
-      "Cuenta Origen": "236748967",
-      "Solucion": "Pago de Tesoreria Gral. Republica",
-      "Monto": "23000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "06-01-2022 08:51 Hrs",
-      "Empresa": "Inversiones Hacktahon",
-      "Cuenta Origen": "223987454",
-      "Solucion": "Pago de Remuneraciones",
-      "Monto": "5000000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "06-01-2022 08:51 Hrs",
-      "Empresa": "Inversiones Latinoamericanas",
-      "Cuenta Origen": "229435678",
-      "Solucion": "Pago de Proveedores",
-      "Monto": "5000000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "02-01-2022 09:00 Hrs",
-      "Empresa": "Supermercados Grupo 44",
-      "Cuenta Origen": "215364789",
-      "Solucion": "Transferencias a Terceros",
-      "Monto": "3000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "06-01-2022 08:51 Hrs",
-      "Empresa": "Universidades Americanas",
-      "Cuenta Origen": "262925378",
-      "Solucion": "Transferencias entre Cuentas",
-      "Monto": "1000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "06-01-2022 08:51 Hrs",
-      "Empresa": "MegaHold Prime",
-      "Cuenta Origen": "210456783",
-      "Solucion": "Boleta de Garantia",
-      "Monto": "3000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "06-01-2022 08:51 Hrs",
-      "Empresa": "Inmobiliaria Velasco",
-      "Cuenta Origen": "236748967",
-      "Solucion": "Pago de Previred",
-      "Monto": "450000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "06-01-2022 08:51 Hrs",
-      "Empresa": "Inversiones Hacktahon",
-      "Cuenta Origen": "223987454",
-      "Solucion": "Pago de Impuestos Dolares",
-      "Monto": "10000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 11:11 Hrs",
-      "Empresa": "Inversiones Latinoamericanas",
-      "Cuenta Origen": "229435678",
-      "Solucion": "Pago de Tesoreria Gral. Republica",
-      "Monto": "3000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 11:11 Hrs",
-      "Empresa": "Supermercados Grupo 44",
-      "Cuenta Origen": "215364789",
-      "Solucion": "Pago de Remuneraciones",
-      "Monto": "450000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 11:11 Hrs",
-      "Empresa": "Universidades Americanas",
-      "Cuenta Origen": "362925378",
-      "Solucion": "Pago de Proveedores",
-      "Monto": "450000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 11:11 Hrs",
-      "Empresa": "MegaHold Prime",
-      "Cuenta Origen": "210456783",
-      "Solucion": "Transferencias a Terceros",
-      "Monto": "1000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 15:56 Hrs",
-      "Empresa": "Inmobiliaria Velasco",
-      "Cuenta Origen": "236748967",
-      "Solucion": "Transferencias entre Cuentas",
-      "Monto": "1000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 15:56 Hrs",
-      "Empresa": "Inversiones Hacktahon",
-      "Cuenta Origen": "223987454",
-      "Solucion": "Boleta de Garantia",
-      "Monto": "1000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-01-2022 08:33 Hrs",
-      "Empresa": "Inversiones Latinoamericanas",
-      "Cuenta Origen": "229435678",
-      "Solucion": "Pago de Previred",
-      "Monto": "450000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-01-2022 08:33 Hrs",
-      "Empresa": "Supermercados Grupo 44",
-      "Cuenta Origen": "215364789",
-      "Solucion": "Pago de Impuestos Dolares",
-      "Monto": "10000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "02-01-2022 09:00 Hrs",
-      "Empresa": "Universidades Americanas",
-      "Cuenta Origen": "362925378",
-      "Solucion": "Pago de Tesoreria Gral. Republica",
-      "Monto": "700000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-01-2022 08:33 Hrs",
-      "Empresa": "MegaHold Prime",
-      "Cuenta Origen": "210456783",
-      "Solucion": "Pago de Remuneraciones",
-      "Monto": "700000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-01-2022 08:33 Hrs",
-      "Empresa": "Inmobiliaria Velasco",
-      "Cuenta Origen": "236748967",
-      "Solucion": "Pago de Proveedores",
-      "Monto": "700000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-01-2022 08:33 Hrs",
-      "Empresa": "Inversiones Hacktahon",
-      "Cuenta Origen": "223987454",
-      "Solucion": "Transferencias a Terceros",
-      "Monto": "450000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 15:56 Hrs",
-      "Empresa": "Inversiones Latinoamericanas",
-      "Cuenta Origen": "229435678",
-      "Solucion": "Transferencias entre Cuentas",
-      "Monto": "450000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 15:56 Hrs",
-      "Empresa": "Supermercados Grupo 44",
-      "Cuenta Origen": "215364789",
-      "Solucion": "Boleta de Garantia",
-      "Monto": "700000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-01-2022 08:33 Hrs",
-      "Empresa": "Universidades Americanas",
-      "Cuenta Origen": "362925378",
-      "Solucion": "Pago de Previred",
-      "Monto": "450000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 11:11 Hrs",
-      "Empresa": "MegaHold Prime",
-      "Cuenta Origen": "210456783",
-      "Solucion": "Pago de Impuestos Dolares",
-      "Monto": "10000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 11:11 Hrs",
-      "Empresa": "Inmobiliaria Velasco",
-      "Cuenta Origen": "236748967",
-      "Solucion": "Pago de Tesoreria Gral. Republica",
-      "Monto": "700000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "06-01-2022 08:51 Hrs",
-      "Empresa": "Inversiones Hacktahon",
-      "Cuenta Origen": "223987454",
-      "Solucion": "Pago de Remuneraciones",
-      "Monto": "50000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "06-01-2022 08:51 Hrs",
-      "Empresa": "Inversiones Latinoamericanas",
-      "Cuenta Origen": "229435678",
-      "Solucion": "Pago de Proveedores",
-      "Monto": "10000000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "06-01-2022 08:51 Hrs",
-      "Empresa": "Supermercados Grupo 44",
-      "Cuenta Origen": "215364789",
-      "Solucion": "Transferencias a Terceros",
-      "Monto": "1000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "06-01-2022 08:51 Hrs",
-      "Empresa": "Universidades Americanas",
-      "Cuenta Origen": "362925378",
-      "Solucion": "Transferencias entre Cuentas",
-      "Monto": "6000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "02-01-2022 09:00 Hrs",
-      "Empresa": "MegaHold Prime",
-      "Cuenta Origen": "210456783",
-      "Solucion": "Boleta de Garantia",
-      "Monto": "6000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "02-01-2022 09:00 Hrs",
-      "Empresa": "Inmobiliaria Velasco",
-      "Cuenta Origen": "236748967",
-      "Solucion": "Pago de Previred",
-      "Monto": "5000000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "02-01-2022 09:00 Hrs",
-      "Empresa": "Inversiones Hacktahon",
-      "Cuenta Origen": "223987454",
-      "Solucion": "Pago de Impuestos",
-      "Monto": "23000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "02-01-2022 09:00 Hrs",
-      "Empresa": "Inversiones Latinoamericanas",
-      "Cuenta Origen": "229435678",
-      "Solucion": "Pago de Tesoreria Gral. Republica",
-      "Monto": "23000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-02-2022 18:19 Hrs",
-      "Empresa": "Supermercados Grupo 44",
-      "Cuenta Origen": "215364789",
-      "Solucion": "Pago de Remuneraciones",
-      "Monto": "23000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 15:56 Hrs",
-      "Empresa": "Universidades Americanas",
-      "Cuenta Origen": "362925378",
-      "Solucion": "Pago de Proveedores",
-      "Monto": "23000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 11:11 Hrs",
-      "Empresa": "MegaHold Prime",
-      "Cuenta Origen": "210456783",
-      "Solucion": "Transferencias a Terceros",
-      "Monto": "6000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "03-01-2022 11:11 Hrs",
-      "Empresa": "Inmobiliaria Velasco",
-      "Cuenta Origen": "236748967",
-      "Solucion": "Transferencias entre Cuentas",
-      "Monto": "6000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-02-2022 18:19 Hrs",
-      "Empresa": "Inversiones Hacktahon",
-      "Cuenta Origen": "223987454",
-      "Solucion": "Boleta de Garantia",
-      "Monto": "6000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "01-02-2022 18:19 Hrs",
-      "Empresa": "Inversiones Latinoamericanas",
-      "Cuenta Origen": "229435678",
-      "Solucion": "Pago de Previred",
-      "Monto": "5000000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "02-01-2022 09:00 Hrs",
-      "Empresa": "Supermercados Grupo 44",
-      "Cuenta Origen": "215364789",
-      "Solucion": "Pago de Impuestos",
-      "Monto": "5000000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "02-01-2022 09:00 Hrs",
-      "Empresa": "Universidades Americanas",
-      "Cuenta Origen": "362925378",
-      "Solucion": "Pago de Tesoreria Gral. Republica",
-      "Monto": "23000000",
-      "Estado": "pendiente"
-    },
-    {
-      "Fecha y Hora": "02-01-2022 09:00 Hrs",
-      "Empresa": "MegaHold Prime",
-      "Cuenta Origen": "210456783",
-      "Solucion": "Pago de Remuneraciones",
-      "Monto": "10000000000",
-      "Estado": "pendiente"
-    }
-  ]
-}
+[
+  {
+    "fecha": "01-01-2022 22:00 Hrs",
+    "empresa": "MegaHold Prime",
+    "cuentaorigen": "210456783",
+    "solucion": "Pago de Remuneraciones",
+    "monto": "5000000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "02-01-2022 09:00 Hrs",
+    "empresa": "Inmobiliaria Velasco",
+    "cuentaorigen": "236748967",
+    "solucion": "Pago de Proveedores",
+    "monto": "200000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 11:11 Hrs",
+    "empresa": "Inversiones Hacktahon",
+    "cuentaorigen": "223987454",
+    "solucion": "Transferencias a Terceros",
+    "monto": "6000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-02-2022 18:19 Hrs",
+    "empresa": "Inversiones Latinoamericanas",
+    "cuentaorigen": "229435678",
+    "solucion": "Transferencias entre Cuentas",
+    "monto": "1000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-02-2022 18:19 Hrs",
+    "empresa": "Supermercados Grupo 44",
+    "cuentaorigen": "215364789",
+    "solucion": "Boleta de Garantia",
+    "monto": "100",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-02-2022 18:19 Hrs",
+    "empresa": "Universidades Americanas",
+    "cuentaorigen": "362925378",
+    "solucion": "Pago de Previred",
+    "monto": "10",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-02-2022 18:19 Hrs",
+    "empresa": "MegaHold Prime",
+    "cuentaorigen": "210456783",
+    "solucion": "Pago de Impuestos",
+    "monto": "1",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 15:56 Hrs",
+    "empresa": "Inmobiliaria Velasco",
+    "cuentaorigen": "236748967",
+    "solucion": "Pago de Tesoreria Gral. Republica",
+    "monto": "23000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "06-01-2022 08:51 Hrs",
+    "empresa": "Inversiones Hacktahon",
+    "cuentaorigen": "223987454",
+    "solucion": "Pago de Remuneraciones",
+    "monto": "5000000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "06-01-2022 08:51 Hrs",
+    "empresa": "Inversiones Latinoamericanas",
+    "cuentaorigen": "229435678",
+    "solucion": "Pago de Proveedores",
+    "monto": "5000000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "02-01-2022 09:00 Hrs",
+    "empresa": "Supermercados Grupo 44",
+    "cuentaorigen": "215364789",
+    "solucion": "Transferencias a Terceros",
+    "monto": "3000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "06-01-2022 08:51 Hrs",
+    "empresa": "Universidades Americanas",
+    "cuentaorigen": "262925378",
+    "solucion": "Transferencias entre Cuentas",
+    "monto": "1000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "06-01-2022 08:51 Hrs",
+    "empresa": "MegaHold Prime",
+    "cuentaorigen": "210456783",
+    "solucion": "Boleta de Garantia",
+    "monto": "3000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "06-01-2022 08:51 Hrs",
+    "empresa": "Inmobiliaria Velasco",
+    "cuentaorigen": "236748967",
+    "solucion": "Pago de Previred",
+    "monto": "450000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "06-01-2022 08:51 Hrs",
+    "empresa": "Inversiones Hacktahon",
+    "cuentaorigen": "223987454",
+    "solucion": "Pago de Impuestos Dolares",
+    "monto": "10000000",
+    "estado": "pendiente",
+    "currencycode": "USD"
+  },
+  {
+    "fecha": "03-01-2022 11:11 Hrs",
+    "empresa": "Inversiones Latinoamericanas",
+    "cuentaorigen": "229435678",
+    "solucion": "Pago de Tesoreria Gral. Republica",
+    "monto": "3000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 11:11 Hrs",
+    "empresa": "Supermercados Grupo 44",
+    "cuentaorigen": "215364789",
+    "solucion": "Pago de Remuneraciones",
+    "monto": "450000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 11:11 Hrs",
+    "empresa": "Universidades Americanas",
+    "cuentaorigen": "362925378",
+    "solucion": "Pago de Proveedores",
+    "monto": "450000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 11:11 Hrs",
+    "empresa": "MegaHold Prime",
+    "cuentaorigen": "210456783",
+    "solucion": "Transferencias a Terceros",
+    "monto": "1000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 15:56 Hrs",
+    "empresa": "Inmobiliaria Velasco",
+    "cuentaorigen": "236748967",
+    "solucion": "Transferencias entre Cuentas",
+    "monto": "1000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 15:56 Hrs",
+    "empresa": "Inversiones Hacktahon",
+    "cuentaorigen": "223987454",
+    "solucion": "Boleta de Garantia",
+    "monto": "1000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-01-2022 08:33 Hrs",
+    "empresa": "Inversiones Latinoamericanas",
+    "cuentaorigen": "229435678",
+    "solucion": "Pago de Previred",
+    "monto": "450000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-01-2022 08:33 Hrs",
+    "empresa": "Supermercados Grupo 44",
+    "cuentaorigen": "215364789",
+    "solucion": "Pago de Impuestos Dolares",
+    "monto": "10000000",
+    "estado": "pendiente",
+    "currencycode": "USD"
+  },
+  {
+    "fecha": "02-01-2022 09:00 Hrs",
+    "empresa": "Universidades Americanas",
+    "cuentaorigen": "362925378",
+    "solucion": "Pago de Tesoreria Gral. Republica",
+    "monto": "700000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-01-2022 08:33 Hrs",
+    "empresa": "MegaHold Prime",
+    "cuentaorigen": "210456783",
+    "solucion": "Pago de Remuneraciones",
+    "monto": "700000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-01-2022 08:33 Hrs",
+    "empresa": "Inmobiliaria Velasco",
+    "cuentaorigen": "236748967",
+    "solucion": "Pago de Proveedores",
+    "monto": "700000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-01-2022 08:33 Hrs",
+    "empresa": "Inversiones Hacktahon",
+    "cuentaorigen": "223987454",
+    "solucion": "Transferencias a Terceros",
+    "monto": "450000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 15:56 Hrs",
+    "empresa": "Inversiones Latinoamericanas",
+    "cuentaorigen": "229435678",
+    "solucion": "Transferencias entre Cuentas",
+    "monto": "450000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 15:56 Hrs",
+    "empresa": "Supermercados Grupo 44",
+    "cuentaorigen": "215364789",
+    "solucion": "Boleta de Garantia",
+    "monto": "700000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-01-2022 08:33 Hrs",
+    "empresa": "Universidades Americanas",
+    "cuentaorigen": "362925378",
+    "solucion": "Pago de Previred",
+    "monto": "450000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 11:11 Hrs",
+    "empresa": "MegaHold Prime",
+    "cuentaorigen": "210456783",
+    "solucion": "Pago de Impuestos Dolares",
+    "monto": "10000000",
+    "estado": "pendiente",
+    "currencycode": "USD"
+  },
+  {
+    "fecha": "03-01-2022 11:11 Hrs",
+    "empresa": "Inmobiliaria Velasco",
+    "cuentaorigen": "236748967",
+    "solucion": "Pago de Tesoreria Gral. Republica",
+    "monto": "700000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "06-01-2022 08:51 Hrs",
+    "empresa": "Inversiones Hacktahon",
+    "cuentaorigen": "223987454",
+    "solucion": "Pago de Remuneraciones",
+    "monto": "50000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "06-01-2022 08:51 Hrs",
+    "empresa": "Inversiones Latinoamericanas",
+    "cuentaorigen": "229435678",
+    "solucion": "Pago de Proveedores",
+    "monto": "10000000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "06-01-2022 08:51 Hrs",
+    "empresa": "Supermercados Grupo 44",
+    "cuentaorigen": "215364789",
+    "solucion": "Transferencias a Terceros",
+    "monto": "1000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "06-01-2022 08:51 Hrs",
+    "empresa": "Universidades Americanas",
+    "cuentaorigen": "362925378",
+    "solucion": "Transferencias entre Cuentas",
+    "monto": "6000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "02-01-2022 09:00 Hrs",
+    "empresa": "MegaHold Prime",
+    "cuentaorigen": "210456783",
+    "solucion": "Boleta de Garantia",
+    "monto": "6000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "02-01-2022 09:00 Hrs",
+    "empresa": "Inmobiliaria Velasco",
+    "cuentaorigen": "236748967",
+    "solucion": "Pago de Previred",
+    "monto": "5000000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "02-01-2022 09:00 Hrs",
+    "empresa": "Inversiones Hacktahon",
+    "cuentaorigen": "223987454",
+    "solucion": "Pago de Impuestos",
+    "monto": "23000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "02-01-2022 09:00 Hrs",
+    "empresa": "Inversiones Latinoamericanas",
+    "cuentaorigen": "229435678",
+    "solucion": "Pago de Tesoreria Gral. Republica",
+    "monto": "23000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-02-2022 18:19 Hrs",
+    "empresa": "Supermercados Grupo 44",
+    "cuentaorigen": "215364789",
+    "solucion": "Pago de Remuneraciones",
+    "monto": "23000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 15:56 Hrs",
+    "empresa": "Universidades Americanas",
+    "cuentaorigen": "362925378",
+    "solucion": "Pago de Proveedores",
+    "monto": "23000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 11:11 Hrs",
+    "empresa": "MegaHold Prime",
+    "cuentaorigen": "210456783",
+    "solucion": "Transferencias a Terceros",
+    "monto": "6000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "03-01-2022 11:11 Hrs",
+    "empresa": "Inmobiliaria Velasco",
+    "cuentaorigen": "236748967",
+    "solucion": "Transferencias entre Cuentas",
+    "monto": "6000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-02-2022 18:19 Hrs",
+    "empresa": "Inversiones Hacktahon",
+    "cuentaorigen": "223987454",
+    "solucion": "Boleta de Garantia",
+    "monto": "6000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "01-02-2022 18:19 Hrs",
+    "empresa": "Inversiones Latinoamericanas",
+    "cuentaorigen": "229435678",
+    "solucion": "Pago de Previred",
+    "monto": "5000000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "02-01-2022 09:00 Hrs",
+    "empresa": "Supermercados Grupo 44",
+    "cuentaorigen": "215364789",
+    "solucion": "Pago de Impuestos",
+    "monto": "5000000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "02-01-2022 09:00 Hrs",
+    "empresa": "Universidades Americanas",
+    "cuentaorigen": "362925378",
+    "solucion": "Pago de Tesoreria Gral. Republica",
+    "monto": "23000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  },
+  {
+    "fecha": "02-01-2022 09:00 Hrs",
+    "empresa": "MegaHold Prime",
+    "cuentaorigen": "210456783",
+    "solucion": "Pago de Remuneraciones",
+    "monto": "10000000000",
+    "estado": "pendiente",
+    "currencycode": "CLP"
+  }
+]
