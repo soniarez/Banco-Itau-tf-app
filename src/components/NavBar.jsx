@@ -25,7 +25,7 @@ const NavBar = () => {
           <span className='border-r-4 border-[#003399] h-8 w-1 rounded'></span>
           <div className="flex flex-row ml-8 items-center mr-12">
             <a className='bg-[#EEEEEE] rounded-[100%] h-10 w-10 flex items-center justify-center mr-2' >
-              <img className="py-2 h-[35px]" src="../public/empresa.png" alt="Logo Empresa" />
+              <img className="py-2 h-[35px]" src="src/img/empresa.png" alt="Logo Empresa" />
             </a>
             <h1 className='text-[#EC7000] text-sm font-bold font-sans'>{business}</h1>
           </div>
@@ -37,7 +37,7 @@ const NavBar = () => {
       <div className='flex justify-end mr-32'>
         <section className='flex flex-row items-center mr-12'>
           <a className='bg-[#EEEEEE] rounded-[100%] h-10 w-10 flex items-center justify-center mr-2' >
-            <img className="py-2 h-8" src="../public/user.png" alt="Logo Usuario" />
+            <img className="py-2 h-8" src="src/img/user.png" alt="Logo Usuario" />
           </a>
           <h1 className='text-sm font-bold font-sans mr-20'>{user}</h1>
         </section>
