@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridToolbar,
+  esES } from '@mui/x-data-grid';
 
 const DashboardMulti = () => {
   const [movementsData, setMovementsData] = useState([]);
@@ -72,6 +73,14 @@ const DashboardMulti = () => {
           columns={columns}
           rows={movementsData}
           pageSize={20}
+          components={{ Toolbar: GridToolbar }}
+          componentsProps={{
+            toolbar: {
+              showQuickFilter: true,
+              quickFilterProps: { debounceMs: 500 },
+            },
+          }}
+          localeText={esES.components.MuiDataGrid.defaultProps.localeText}
           sx={{
             boxShadow: 2,
             fontSize: 12,
