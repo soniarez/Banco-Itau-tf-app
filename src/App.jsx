@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './views/Home';
 import Authorization from './views/Authorization';
 import Movements from './views/Movements';
-import Mycompanies from './views/Mycompanies';
+import Companies from './views/Companies';
 import Login from './views/Login';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
           <Route path='/' element={<Login />} />
           <Route path='/home' element={<Home />} />
           <Route path='/authorization' element={<Authorization />} />
-          <Route path='/mycompanies' element={<Mycompanies />} />
+          <Route path='/companies' element={<Companies />} />
           <Route path='/movements' element={<Movements />} />
         </Routes>
       </Router>

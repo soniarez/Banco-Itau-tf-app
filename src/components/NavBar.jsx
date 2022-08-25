@@ -50,15 +50,10 @@ const NavBar = () => {
                 <img className='py-2 h-10' src={empresa} alt='Logo Empresa' />
               </a>
               <h1 className='text-[#EC7000] text-sm font-bold font-sans'>
-                {dataUser[0]?.company}
+              Wholesale Digital Banking
               </h1>
             </div>
           </section>
-        </div>
-        <div>
-          <button className='mr-12 bg-[#FFFFFF] border-[#EC7000] border text-[#EC7000] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]'>
-            Ver Empresas
-          </button>
         </div>
         <div className='flex justify-end mr-32'>
           <section className='flex flex-row items-center mr-12'>

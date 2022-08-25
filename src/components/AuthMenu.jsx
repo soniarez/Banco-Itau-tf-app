@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
 import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
-import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import AuthMenuChart from './AuthMenuChart';
 import '../../src/App.css';
@@ -51,39 +50,6 @@ const AuthMenu = () => {
       headerClassName: 'itau-app',
       align: 'center',
     },
-    /*  {
-      field: 'details',
-      headerName: 'Detalles',
-      width: 100,
-      headerAlign: 'center',
-      headerClassName: 'itau-app',
-      align: 'center',
-      renderCell: params => {
-        return (
-          <div>
-            {data ? (
-              <div>
-                <Button
-                  variant="text"
-                  size="small"
-                  sx={{
-                    color: '#f5ac4a',
-                    display: 'inline',
-                    fontWeight: 'bold',
-                    mx: 0.5,
-                    fontSize: 9,
-                  }}
-                >
-                  Más detalles
-                </Button>
-              </div>
-            ) : (
-              <p>Data is loading...</p>
-            )}
-          </div>
-        );
-      },
-    },  */
     {
       field: 'autorize',
       headerName: 'Autorizar',

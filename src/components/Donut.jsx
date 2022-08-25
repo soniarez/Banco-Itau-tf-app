@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { onSnapshot, collection, db } from '../firebase/init';
 
-const Donut = ({segment}) => {
+const Donut = ({business}) => {
     const [data, setData] = useState([]);
     const [charge, setCharge] = useState([]);
     const [chargeT, setChargeT] = useState([]);
@@ -11,7 +11,7 @@ const Donut = ({segment}) => {
     const [paymentT, setPaymentT] = useState([]);
     const navigate = useNavigate()
 
-    const name= segment
+    const name= business
 
     console.log(name)
 
@@ -28,17 +28,16 @@ const Donut = ({segment}) => {
         filterData()
     }, [data]);
     useEffect(() => {
-        totalPayment()
+        totalCharge()
     }, [charge]);
     useEffect(() => {
-        totalCharge()
+        totalPayment()
     }, [payment]);
 
     const filterData = () => {
-        const charge = data.filter(item => item.charge !== '-' & item.segment == name);
-        console.log(segment, 'segme?')
+        const charge = data.filter(item => item.charge != '-' & item['Razon Social'] == name);
         setCharge(charge);
-        const payment = data.filter(item => item.payment !== '-' & item.segment == name)
+        const payment = data.filter(item => item.payment != '-' & item['Razon Social'] == name)
         setPayment(payment)
     };
 
@@ -109,8 +108,8 @@ const Donut = ({segment}) => {
     const series = [chargeT, paymentT];
 
     return (
-        <div className={charge > payment ?'bg-[#EDFFF5] flex flex-col border border-[#2ECC71] rounded-2xl w-fit h-fit ml-6 my-6':'bg-[#FAFBFC] flex flex-col border border-[#FFE3DD] rounded-2xl w-fit ml-6 my-6 h-fit'}>
-            <h1 className='text-2xl text-[#003767] flex justify-center my-6 font-bold font-sans'>{segment}</h1>
+        <div className={chargeT > paymentT ?'bg-[#EDFFF5] flex flex-col border border-[#2ECC71] rounded-2xl w-fit h-fit ml-6 my-6':'bg-[#FFDDD6] flex flex-col border border-[#FF5733] rounded-2xl w-fit ml-6 my-6 h-fit'}>
+            <h1 className='text-2xl text-[#003767] flex justify-center my-6 font-bold font-sans'>{business}</h1>
             <div>
                 <Chart options={options} series={series} type='donut' width='350px' />
             </div>
