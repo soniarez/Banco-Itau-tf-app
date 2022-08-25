@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
-import { DataGrid, GridToolbar,
-  esES } from '@mui/x-data-grid';
+import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
+import Selection from './Selection';
+import Select from 'react-select';
 
 const DashboardMulti = () => {
   const [movementsData, setMovementsData] = useState([]);
+  const [companiesData, setCompaniesData] = useState([]);
 
   const columns = [
     {
@@ -16,9 +18,33 @@ const DashboardMulti = () => {
       align: 'center',
     },
     {
+      field: 'Razon Social',
+      headerName: 'Razon Social',
+      width: 170,
+      headerAlign: 'center',
+      headerClassName: 'itau-app',
+      align: 'left',
+    },
+    {
+      field: 'segment',
+      headerName: 'Segmento',
+      width: 140,
+      headerAlign: 'center',
+      headerClassName: 'itau-app',
+      align: 'left',
+    },
+    {
+      field: 'account',
+      headerName: 'Cuenta',
+      width: 100,
+      headerAlign: 'center',
+      headerClassName: 'itau-app',
+      align: 'center',
+    },
+    {
       field: 'codemov',
-      headerName: 'Codigo Movimiento',
-      width: 150,
+      headerName: 'Codigo Mov',
+      width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -42,7 +68,7 @@ const DashboardMulti = () => {
     {
       field: 'payment',
       headerName: 'Abono',
-      width: 105,
+      width: 140,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'left',
@@ -50,7 +76,7 @@ const DashboardMulti = () => {
     {
       field: 'charge',
       headerName: 'Cargo',
-      width: 115,
+      width: 140,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'left',
@@ -70,16 +96,32 @@ const DashboardMulti = () => {
     });
   }, []);
 
+  useEffect(() => {
+    onSnapshot(collection(db, 'companies'), (snapshot) => {
+      const dataCompaniesFromFirestore = snapshot.docs.map((doc) => {
+        return {
+          docId: doc.id,
+          ...doc.data(),
+        };
+      });
+      setCompaniesData(dataCompaniesFromFirestore);
+    });
+  }, []);
+
   return (
     <div>
       <h2>Autorizar Transacciones Multiempresa: </h2>
-      <div style={{ height: 450, width: '66%' }}>
+      <div>
+        <div>
+          <Selection companiesData={companiesData} />
+        </div>
+      </div>
+      <div style={{ height: 450, width: '96%' }}>
         <DataGrid
           rowHeight={25}
           columns={columns}
           rows={movementsData}
           pageSize={20}
-          rowsPerPageOptions={[20]}
           components={{ Toolbar: GridToolbar }}
           componentsProps={{
             toolbar: {
@@ -90,7 +132,7 @@ const DashboardMulti = () => {
           localeText={esES.components.MuiDataGrid.defaultProps.localeText}
           sx={{
             boxShadow: 2,
-            fontSize: 11,
+            fontSize: 12,
             m: 2,
             '& .itau-app-USD': {
               bgcolor: '#B4B4B4',

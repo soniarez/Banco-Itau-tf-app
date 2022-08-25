@@ -8,13 +8,15 @@ import HoldingDonut from '../components/HoldingDonut';
 const Home = () => {
   return (
     <div>
-       <NavBar />
-      <div className='main-grid'>
+      <NavBar />
+      <div className='main-grid bg-[#EEEEEE]'>
         <SideBar />
         <div> 
+       <div className='flex justify-center'>
           <WidgetsAuth />
           <HoldingDonut />
           {/* <Center /> */}
+        </div>
         </div>
       </div>
       <Footer />

@@ -108,7 +108,7 @@ const AuthMenu = () => {
     {
       field: 'details',
       headerName: 'Detalles',
-      width: 70,
+      width: 65,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -123,6 +123,7 @@ const AuthMenu = () => {
                   checkedIcon={<FolderOpenIcon />}
                   sx={{
                     '&.Mui-checked': {
+                      
                       color: '#F1AE2F',
                     },
                   }}
@@ -151,7 +152,7 @@ const AuthMenu = () => {
     {
       field: 'autorize',
       headerName: 'Autorizar',
-      width: 65,
+      width: 70,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -181,7 +182,7 @@ const AuthMenu = () => {
     {
       field: 'reject',
       headerName: 'Rechazar',
-      width: 65,
+      width: 70,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -289,10 +290,18 @@ const AuthMenu = () => {
     <div>
       <h2>Autorizar Transacciones Multiempresa: </h2>
       <div className="flex flex-row justify-evenly">
-        <button>Aceptar Todo</button>
-        <button>Rechazar Todo</button>
+    
+          <button className='mr-12 bg-[#FFFFFF] border-[#6aec00fd] border text-[#00ec1fb2] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]'>
+           Aceptar todo
+          </button>
+          <button className='mr-12 bg-[#FFFFFF] border-[#ec1000] border text-[#ec2f00] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]'>
+           Rechazar todo
+          </button>
+       
       </div>
-      <div style={{ height: 450, width: '76.5%' }}>
+
+      <div style={{ height: 430, width: '66%' }}>
+
         <DataGrid
           rowHeight={25}
           columns={columns}
@@ -319,9 +328,12 @@ const AuthMenu = () => {
           getRowClassName={params => `itau-app-${params.row.amount}`}
         />
       </div>
-      <button onClick={() => sendTransaction()}>Ejecutar</button>
+      <button className='mr-12 bg-[#f89719] border-[#ec7e00fd] border text-[#0c0902b2] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]'
+          onClick={() => sendTransaction()}>Ejecutar</button>
       <div>
+        <div className='flex-1'>
         <AuthMenuChart data={data} />
+      </div>
       </div>
     </div>
   );

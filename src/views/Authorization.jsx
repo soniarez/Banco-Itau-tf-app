@@ -8,7 +8,7 @@ const Authorization = () => {
   return (
     <div>
       <NavBar />
-      <div className="main-grid">
+      <div className="main-grid ">
         <SideBar />
         <div>
           <Center />
