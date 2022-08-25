@@ -10,17 +10,16 @@ const Home = () => {
   return (
     <div className='h-full'>
       <NavBar />
-      <div className='main-grid bg-[#EEEEEE]'>
+      <div className='flex bg-[#EEEEEE]'>
         <SideBar />
         <div>
-          <div className='flex justify-center'>
+          <section className='flex justify-center ml-8'>
             <WidgetsAuth />
             <HoldingDonut />
-            {/* <Center /> */}
-          </div>
-          <div className='flex flex-col items-center'>
+          </section>
+          <div className='flex flex-col items-center mb-6'>
             <h1 className='text-3xl text-[#003767] flex ml-2 my-6 font-bold font-sans'>Resumen de empresas</h1>
-            <section className='flex flex-row'>
+            <section className='flex flex-row border-t  border-[#D8D8D8]'>
               <Donut business={'MegaHold Prime'} />
               <Donut business={'Inversiones Latinoamericanas'} />
               <Donut business={'Inversiones Hacktahon'} />
