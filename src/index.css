@@ -6,6 +6,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden
 }
 
 .main-grid {
@@ -18,3 +19,4 @@
 .buttons{
   font-size: 26px;
 }
+

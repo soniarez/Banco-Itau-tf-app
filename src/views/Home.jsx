@@ -14,11 +14,12 @@ const Home = () => {
       <div className='main-grid bg-[#EEEEEE]'>
         <SideBar />
         <div>
-          <section className='flex flex-row mt-6'>
-            <WidgetsAuth />
-            <HoldingDonut />
-          </section>
+          <div className='flex justify-center'>
+          <h1>HOME</h1>  
+          <WidgetsAuth />
+          <HoldingDonut />
           {/* <Center /> */}
+        </div>
         </div>
       </div>
       <Footer />
