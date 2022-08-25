@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
-import {
-  DataGrid,
-  GridToolbar,
-  esES,
-} from '@mui/x-data-grid';
+import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
-import FolderOpenIcon from '@mui/icons-material/FolderOpen';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AuthMenuChart from './AuthMenuChart';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 import '../../src/App.css';
 
 const AuthMenu = () => {
@@ -121,7 +117,7 @@ const AuthMenu = () => {
           <div>
             {data ? (
               <div>
-               {/*  <Checkbox
+                {/*  <Checkbox
                   size="small"
                   icon={<FolderOpenIcon/>}
                   checkedIcon={<FolderOpenIcon />}
@@ -132,7 +128,19 @@ const AuthMenu = () => {
                     },
                   }}
                 /> */}
-                <Button variant="outlined">Más detalles</Button>
+                <Button
+                  variant="text"
+                  size="small"
+                  sx={{
+                    color: '#f5ac4a',
+                    display: 'inline',
+                    fontWeight: 'bold',
+                    mx: 0.5,
+                    fontSize: 9,
+                  }}
+                >
+                  Más detalles
+                </Button>
               </div>
             ) : (
               <p>Data is loading...</p>
@@ -148,7 +156,7 @@ const AuthMenu = () => {
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
-      renderCell: (params) => {
+      renderCell: params => {
         return (
           <div>
             {data ? (

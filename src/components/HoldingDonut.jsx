@@ -51,7 +51,7 @@ console.log(data)
     }
 
     const options = {
-        labels: ['Abono', 'Cargo'],
+        labels: ['Ganancia', 'Inversion'],
         legend: {
             position: 'left',
             horizontalAlign: 'left',

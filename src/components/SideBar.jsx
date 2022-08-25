@@ -3,35 +3,26 @@ import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   return (
-    <div className=' bg-gray-200 text-gray-700 w-[200px] h-screen shadow border '>
-      <div className='flex flex-col items-center w-45 h-full overflow-hidden text-gray-700 bg-gray-100 rounded'>
-        <div className='flex items-center w-full px-3 mt-3'>
-          <svg
-            className='w-8 h-8 fill-current'
-            viewBox='0 0 20 20'
-            fill='currentColor'
-          ></svg>
-          <div className='ml-2 text-sm font-bold'>Dashboard Multiempresa</div>
-        </div>
 
-        <div className='w-full px-2'>
-          <div className='flex flex-col items-center w-full mt-3 border-t border-gray-300'>
-            <div className='flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300'>
-              <svg
-                className='w-6 h-6 stroke-current'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
-                />
-              </svg>
-              <div className='ml-2 text-sm font-medium'>Buscar</div>
-            </div>
+  
+    <div className=' bg-gray-200 text-gray-700 w-[200px] h-screen shadow border '> 
+<div className="flex flex-col items-center w-45 h-full overflow-hidden text-gray-700 bg-gray-100 rounded">
+		<Link to="/home" className="flex items-center w-full px-3 mt-3  hover:bg-gray-300">
+			<svg className="w-8 h-8 fill-current"  viewBox="0 0 20 20" fill="currentColor">
+				</svg>
+			<div className="ml-2 text-sm font-bold">Dashboard Multiempresa</div>
+		</Link>
+		
+		<div className="w-full px-2">
+			<div className="flex flex-col items-center w-full mt-3 border-t border-gray-300">
+			
+				<div className="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" >
+					<svg className="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+					</svg>
+					<div className="ml-2 text-sm font-medium">Buscar</div>
+				</div>
+
             <Link
               to='/mycompanies'
               className='flex items-center w-full h-12 px-3 mt-2 hover:bg-gray-300 rounded'
