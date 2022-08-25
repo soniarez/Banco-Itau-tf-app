@@ -1,17 +1,46 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
-import { DataGrid, GridToolbar,
-  esES } from '@mui/x-data-grid';
+
+import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
+import Selection from './Selection';
+import Select from 'react-select';
 import { grid } from '@mui/system';
   
 
+
 const DashboardMulti = () => {
   const [movementsData, setMovementsData] = useState([]);
+  const [companiesData, setCompaniesData] = useState([]);
 
   const columns = [
     {
       field: 'date',
       headerName: 'Fecha y Hora',
+      width: 100,
+
+      headerAlign: 'center',
+      headerClassName: 'itau-app',
+      align: 'center',
+    },
+    {
+      field: 'Razon Social',
+      headerName: 'Razon Social',
+      width: 170,
+      headerAlign: 'center',
+      headerClassName: 'itau-app',
+      align: 'left',
+    },
+    {
+      field: 'segment',
+      headerName: 'Segmento',
+      width: 140,
+      headerAlign: 'center',
+      headerClassName: 'itau-app',
+      align: 'left',
+    },
+    {
+      field: 'account',
+      headerName: 'Cuenta',
       width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
@@ -19,8 +48,9 @@ const DashboardMulti = () => {
     },
     {
       field: 'codemov',
-      headerName: 'Codigo Movimiento',
-      width: 150,
+
+      headerName: 'Codigo Mov',
+      width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -44,7 +74,7 @@ const DashboardMulti = () => {
     {
       field: 'payment',
       headerName: 'Abono',
-      width: 105,
+      width: 140,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'left',
@@ -52,7 +82,8 @@ const DashboardMulti = () => {
     {
       field: 'charge',
       headerName: 'Cargo',
-      width: 115,
+
+      width: 140,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'left',
@@ -72,12 +103,27 @@ const DashboardMulti = () => {
     });
   }, []);
 
+  useEffect(() => {
+    onSnapshot(collection(db, 'companies'), (snapshot) => {
+      const companieDataFromFirestore = snapshot.docs.map((doc) => {
+        return {
+          docId: doc.id,
+          ...doc.data(),
+        };
+      });
+      setCompaniesData(companieDataFromFirestore);
+    });
+  }, []);
+
   return (
     <div>
       <h2>Autorizar Transacciones Multiempresa: </h2>
-
-    
-      <div style={{ height: 450, width: '970px'   }}>
+      <div>
+        <div>
+          <Selection companiesData={companiesData} />
+        </div>
+      </div>
+      <div style={{ height: 450, width: '96%' }}>
 
         <DataGrid
           rowHeight={25}

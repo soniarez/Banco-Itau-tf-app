@@ -1,16 +1,33 @@
 import { WindowSharp } from '@mui/icons-material';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import empresa from '../img/empresa.png';
-import usuario from '../img/user.png';
+import { onSnapshot, collection, db } from '../firebase/init';
+
 
 const NavBar = () => {
+  const [dataUser, setDataUser] = useState([]);
+
+  console.log('data', dataUser);
+
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem('business');
     localStorage.removeItem('user');
     navigate('/');
   };
+
+
+  useEffect(() => {
+    onSnapshot(collection(db, 'users'), (snapshot) => {
+      const dataUserFromFirestore = snapshot.docs.map((doc) => {
+        return {
+          docId: doc.id,
+          ...doc.data(),
+        };
+      });
+      setDataUser(dataUserFromFirestore);
+    });
+  }, []);
 
 
   const business = window.localStorage.business;
@@ -39,7 +56,7 @@ const NavBar = () => {
                 />
               </a>
               <h1 className='text-[#EC7000] text-sm font-bold font-sans'>
-                {business}
+                {dataUser[0]?.company}
               </h1>
             </div>
           </section>
@@ -58,7 +75,9 @@ const NavBar = () => {
                 alt='Logo Usuario'
               />
             </a>
-            <h1 className='text-sm font-bold font-sans mr-20'>{user}</h1>
+            <h1 className='text-sm font-bold font-sans mr-20'>
+              {dataUser[0]?.name}
+            </h1>
           </section>
           <button
             onClick={handleLogout}
