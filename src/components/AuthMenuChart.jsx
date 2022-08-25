@@ -34,23 +34,31 @@ const AuthMenuChart = ({ data }) => {
         barHeight: "40%",
       },
       tooltip: {
-        followCursor:true,
+        followCursor: true,
       }
     },
     xaxis: {
       categories: ['Pendientes', 'Autorizadas', 'Rechazadas'],
+      labels: {
+        style: {
+            fontSize: '14px'
+        }
+   }
     },
     yaxis: {
-      labels:{
-        formatter:(val) =>{
+      labels: {
+        formatter: (val) => {
           return `${val}`
+        },
+        style: {
+          fontSize: '14px'
         }
       },
     },
     title: {
       text: "Transacciones Empresa",
-      style:{
-        fontSize: 12,
+      style: {
+        fontSize: 18,
       }
     },
     stroke: {
@@ -63,7 +71,7 @@ const AuthMenuChart = ({ data }) => {
   return (
     <div className='donut'>
       <div className=' flex justify-center mt-6' >
-        <Chart options={options} series={series} type='bar' width='650' height='300'/>
+        <Chart options={options} series={series} type='bar' width='650' height='300' />
       </div>
     </div>
   );

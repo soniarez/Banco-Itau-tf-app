@@ -95,10 +95,10 @@ const Mycompanies = () => {
   ];
 
   return (
-    <div>
-      <h1 className='text-3xl text-[#003767] flex ml-10 mt-6 font-bold font-sans'>Mis Empresas </h1>
-      <section className="flex flex-row ml-10 mt-6  justify-center h-screen w-screen ">
-        <div style={{ height: 550, width: 1100 }}>
+    <div className='flex flex-col'>
+      <h1 className='text-3xl text-[#003767] flex ml-6 mt-6 font-bold font-sans'>Mis Empresas </h1>
+      <section className="flex mt-6 -ml-8 justify-center h-screen w-screen ">
+        <div style={{ height: 750, width: 1100 }}>
           <DataGrid
             rows={normalizedData}
             columns={columns}
@@ -116,8 +116,7 @@ const Mycompanies = () => {
             sx={{
               boxShadow: 0,
               border: 0,
-              fontSize: 11,
-              m: 2,
+              fontSize: 14,
               borderColor: 'primary.light',
               '& .MuiDataGrid-cell:hover': {
                 color: 'primary.main',
