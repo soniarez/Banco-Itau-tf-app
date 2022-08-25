@@ -1,6 +1,8 @@
 import { WindowSharp } from '@mui/icons-material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import empresa from '../img/empresa.png';
+import usuario from '../img/user.png';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -18,7 +20,7 @@ const NavBar = () => {
       <div className='flex justify-between items-center w-screen'>
         <div className='flex flex-wrap items-center justify-between'>
           <section className='flex items-center justify-center'>
-            <a className='mr-4 ml-32'>
+            <a className='mr-4 ml-16'>
               <img
                 src='https://d1dzq2r60kxox4.cloudfront.net/uploads/bb9193d2-d4b8-4f76-bcf2-d6e935663c0b/original/header_logo.svg'
                 alt='Logo de Itaú'
@@ -28,8 +30,8 @@ const NavBar = () => {
             <div className='flex flex-row ml-8 items-center mr-12'>
               <a className='bg-[#EEEEEE] rounded-[100%] h-10 w-10 flex items-center justify-center mr-2'>
                 <img
-                  className='py-2 h-[35px]'
-                  src='src/img/empresa.png'
+                  className='py-2 h-10'
+                  src={empresa}
                   alt='Logo Empresa'
                 />
               </a>
@@ -48,8 +50,8 @@ const NavBar = () => {
           <section className='flex flex-row items-center mr-12'>
             <a className='bg-[#EEEEEE] rounded-[100%] h-10 w-10 flex items-center justify-center mr-2'>
               <img
-                className='py-2 h-8'
-                src='src/img/user.png'
+                className='py-2 h-[35px]'
+                src={usuario}
                 alt='Logo Usuario'
               />
             </a>
