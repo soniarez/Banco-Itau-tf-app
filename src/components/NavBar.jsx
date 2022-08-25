@@ -12,8 +12,10 @@ const NavBar = () => {
     navigate('/');
   };
 
+
   const business = window.localStorage.business;
   const user = window.localStorage.user;
+
 
   return (
     <nav className='bg-[#FFFFFF] h-[100px] w-screen flex flex-wrap items-center py-2 border-b-2 border-[#EFE9E5] box-border pb-4 shadow-lg justify-between'>
@@ -26,6 +28,7 @@ const NavBar = () => {
                 alt='Logo de Itaú'
               />
             </a>
+
             <span className='border-r-4 border-[#003399] h-8 w-1 rounded'></span>
             <div className='flex flex-row ml-8 items-center mr-12'>
               <a className='bg-[#EEEEEE] rounded-[100%] h-10 w-10 flex items-center justify-center mr-2'>
@@ -64,6 +67,7 @@ const NavBar = () => {
             Salir
           </button>
         </div>
+
       </div>
     </nav>
   );

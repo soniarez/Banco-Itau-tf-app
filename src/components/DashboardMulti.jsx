@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
 import { DataGrid, GridToolbar,
   esES } from '@mui/x-data-grid';
+import { grid } from '@mui/system';
+  
 
 const DashboardMulti = () => {
   const [movementsData, setMovementsData] = useState([]);
@@ -73,7 +75,10 @@ const DashboardMulti = () => {
   return (
     <div>
       <h2>Autorizar Transacciones Multiempresa: </h2>
-      <div style={{ height: 450, width: '66%' }}>
+
+    
+      <div style={{ height: 450, width: '970px'   }}>
+
         <DataGrid
           rowHeight={25}
           columns={columns}
@@ -97,9 +102,9 @@ const DashboardMulti = () => {
             },
           }}
           getRowClassName={(params) => `itau-app-${params.row.amount}`}
-        />
+        /> </div>
       </div>
-    </div>
+      </div>
   );
 };
 

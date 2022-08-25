@@ -1,7 +1,10 @@
 import Chart from 'react-apexcharts';
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
-import { onSnapshot, collection, db } from '../firebase/init';
+import React from "react";
+import { right } from '@popperjs/core';
+import { flexbox, grid } from '@mui/system';
+import { getRowIdFromRowModel } from '@mui/x-data-grid/hooks/features/rows/gridRowsUtils';
+import { FloodTwoTone } from '@mui/icons-material';
+
 
 const HoldingDonut = () => {
     const [data, setData] = useState([]);
@@ -84,6 +87,7 @@ const HoldingDonut = () => {
                 blur: 1,
                 color: '#007AB7',
                 opacity: 1
+
             }
         },
     };
