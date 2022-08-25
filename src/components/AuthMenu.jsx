@@ -3,8 +3,6 @@ import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
 import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import AuthMenuChart from './AuthMenuChart';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
@@ -12,57 +10,6 @@ import '../../src/App.css';
 
 const AuthMenu = () => {
   const [data, setData] = useState([]);
-
-  const dummy = [
-    {
-      amount: 'CLP 23.000.000',
-      company: 'Inversiones Latinoamericanas',
-      date: '02-01-2022 09:00 Hrs',
-      docId: 'Vo812X6EJTkmaSVcQQDh',
-      id: '4f3c79526c34',
-      isAuthorized: false,
-      isRejected: false,
-      origen: '229435678',
-      solution: 'Pago de Tesoreria Gral. Republica',
-      status: 'pendiente',
-    },
-    {
-      amount: 'CLP 450.000',
-      company: 'Inversiones Latinoamericanas',
-      date: '03-01-2022 15:56 Hrs',
-      docId: 'bPwlEp0Sf34WybbQ4ihX',
-      id: '27574c139db3b',
-      isAuthorized: false,
-      isRejected: false,
-      origen: '229435678',
-      solution: 'Transferencias entre Cuentas',
-      status: 'pendiente',
-    },
-    {
-      amount: 'CLP 6.000.000',
-      company: 'MegaHold Prime',
-      date: '02-01-2022 09:00 Hrs',
-      docId: 'cvCvIaztpJYzOS6OGDlF',
-      id: 'dde458581a341',
-      isAuthorized: false,
-      isRejected: false,
-      origen: '210456783',
-      solution: 'Boleta de Garantia',
-      status: 'pendiente',
-    },
-    {
-      amount: 'USD 10,000,000',
-      company: 'MegaHold Prime',
-      date: '03-01-2022 11:11 Hrs',
-      docId: 'eKWOh6yP4SIc6Xe7qDDa',
-      id: '30bf5ef80813b',
-      isAuthorized: false,
-      isRejected: false,
-      origen: '210456783',
-      solution: 'Pago de Impuestos Dolares',
-      status: 'pendiente',
-    },
-  ];
 
   const columns = [
     {

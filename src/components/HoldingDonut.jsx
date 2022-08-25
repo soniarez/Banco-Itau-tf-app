@@ -118,4 +118,5 @@ console.log(data)
     )
 }
 
+
 export default HoldingDonut;
