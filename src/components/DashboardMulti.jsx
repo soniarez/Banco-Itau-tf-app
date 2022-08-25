@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
-
 import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
 import Selection from './Selection';
 import Select from 'react-select';
-import { grid } from '@mui/system';
-  
-
 
 const DashboardMulti = () => {
   const [movementsData, setMovementsData] = useState([]);
@@ -17,7 +13,6 @@ const DashboardMulti = () => {
       field: 'date',
       headerName: 'Fecha y Hora',
       width: 100,
-
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -48,7 +43,6 @@ const DashboardMulti = () => {
     },
     {
       field: 'codemov',
-
       headerName: 'Codigo Mov',
       width: 100,
       headerAlign: 'center',
@@ -82,7 +76,6 @@ const DashboardMulti = () => {
     {
       field: 'charge',
       headerName: 'Cargo',
-
       width: 140,
       headerAlign: 'center',
       headerClassName: 'itau-app',
@@ -105,13 +98,13 @@ const DashboardMulti = () => {
 
   useEffect(() => {
     onSnapshot(collection(db, 'companies'), (snapshot) => {
-      const companieDataFromFirestore = snapshot.docs.map((doc) => {
+      const dataCompaniesFromFirestore = snapshot.docs.map((doc) => {
         return {
           docId: doc.id,
           ...doc.data(),
         };
       });
-      setCompaniesData(companieDataFromFirestore);
+      setCompaniesData(dataCompaniesFromFirestore);
     });
   }, []);
 
@@ -124,13 +117,11 @@ const DashboardMulti = () => {
         </div>
       </div>
       <div style={{ height: 450, width: '96%' }}>
-
         <DataGrid
           rowHeight={25}
           columns={columns}
           rows={movementsData}
           pageSize={20}
-          rowsPerPageOptions={[20]}
           components={{ Toolbar: GridToolbar }}
           componentsProps={{
             toolbar: {
@@ -141,16 +132,16 @@ const DashboardMulti = () => {
           localeText={esES.components.MuiDataGrid.defaultProps.localeText}
           sx={{
             boxShadow: 2,
-            fontSize: 11,
+            fontSize: 12,
             m: 2,
             '& .itau-app-USD': {
               bgcolor: '#B4B4B4',
             },
           }}
           getRowClassName={(params) => `itau-app-${params.row.amount}`}
-        /> </div>
+        />
       </div>
-      </div>
+    </div>
   );
 };
 
