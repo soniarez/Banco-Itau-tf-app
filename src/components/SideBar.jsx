@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 //
 const SideBar = () => {
   return (
-    <div className='text-gray-700 w-[200px] h-screen shadow border bg-gray-100'>
-      <div className="flex flex-col items-center w-45 overflow-hidden text-gray-700  rounded">
+    <div className='text-gray-700 w-[200px]  shadow border bg-gray-100'>
+      <section className="flex flex-col items-center w-45 overflow-hidden text-gray-700  rounded">
         <Link to="/home" className="flex items-center w-full px-3 mt-3  hover:bg-gray-300">
-          <svg className="w-8 h-8 fill-current" viewBox="0 0 20 20" fill="currentColor">
+          <svg className="w-8 h-8 fill-current" fill="currentColor">
           </svg>
           <div className="ml-2 text-sm font-bold">Dashboard Multiempresa</div>
         </Link>
 
         <div className="w-full px-2">
-          <div className="flex flex-col items-center w-full mt-3 border-t border-gray-300">
+          <section className="flex flex-col items-center w-full mt-3 border-t border-gray-300">
             <Link
               to='/companies'
               className='flex items-center w-full h-12 px-3 mt-2 hover:bg-gray-300 rounded'
@@ -77,9 +77,9 @@ const SideBar = () => {
                 Autorizar Transacciones
               </div>
             </Link>
-          </div>
+          </section>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

@@ -65,6 +65,7 @@ const Login = () => {
               >
                 Ingresar
               </button>
+{/* >>>>>>> c0e25839ed2d59c6d36ec2003899eed221ba6916 */}
             </div>
           </form>
           <section className='mt-6 flex items-center justify-center flex-col'>

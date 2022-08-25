@@ -8,9 +8,9 @@ const Companies = () => {
   return (
     <div>
       <NavBar />
-      <div className="main-grid ">
+      <div className="flex ">
         <SideBar />
-        <div>
+        <div className='flex'>
           <Mycompanies />
         </div>
       </div>
@@ -18,7 +18,4 @@ const Companies = () => {
     </div>
   );
 };
-
-
-
 export default Companies;
