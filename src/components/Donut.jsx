@@ -3,14 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { onSnapshot, collection, db } from '../firebase/init';
 
-const HoldingDonut = () => {
+const Donut = ({segment}) => {
     const [data, setData] = useState([]);
     const [charge, setCharge] = useState([]);
     const [chargeT, setChargeT] = useState([]);
     const [payment, setPayment] = useState([]);
     const [paymentT, setPaymentT] = useState([]);
     const navigate = useNavigate()
-console.log(data)
+
     useEffect(() => {
         onSnapshot(collection(db, 'movements'), (snapshot) => {
             const dataFromFirestore = snapshot.docs.map((doc) => {
@@ -30,10 +30,10 @@ console.log(data)
         totalCharge()
     }, [payment]);
 
-    const filterData = () => {
-        const charge = data.filter(item => item.charge !== '-');
+    const filterData = (segment) => {
+        const charge = data.filter(item => item.charge !== '-' & item.segment == segment);
         setCharge(charge);
-        const payment = data.filter(item => item.payment !== '-')
+        const payment = data.filter(item => item.payment !== '-' & item.segment == segment)
         setPayment(payment)
     };
 
@@ -118,4 +118,4 @@ console.log(data)
     )
 }
 
-export default HoldingDonut;
+export default Donut;
