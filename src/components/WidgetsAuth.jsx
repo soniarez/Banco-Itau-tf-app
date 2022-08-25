@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db } from '../firebase/init';
 import { useNavigate } from "react-router-dom";
+import wellcome from '../img/bienvenida.png';
 
 const WidgetsAuth = () => {
     const [data, setData] = useState([]);
@@ -29,7 +30,7 @@ const WidgetsAuth = () => {
     return (
         <div className='flex flex-col mx-16'>
         <a>
-            <img src='src/img/bienvenida.png' alt="banner bienvenida" className='rounded-2xl'/>
+            <img src={wellcome} alt="banner bienvenida" className='rounded-2xl'/>
         </a>
             <div className={result? 'bg-[#EC7000] h-fit flex flex-col rounded-2xl m-6 shadow-lg' : 'bg-[#FFFFFF] flex flex-col rounded-2xl m-6 shadow-lg border-[#EC7000] border'}>
                 <div className={result ? 'flex items-center justify-center text-[#FFFFFF]' : 'flex items-center justify-center text-[#EC7000]'}>

@@ -3,30 +3,30 @@ import { useState } from "react";
 import logo from '../img/logo.png';
 
 const Login = () => {
-  const [user, setUser] = useState('');
-  const [password, setPassword] = useState('');
+    const [user, setUser] = useState('');
+    const [password, setPassword] = useState('');
 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const login = (user, password) => {
-    if (user === '768946575' && password === '123456') {
-      localStorage.setItem('business', 'MegaHold Prime');
-      localStorage.setItem('user', 'MegaHold');
-      navigate('/Home');
-    } else if (user === '901235670' && password === '123456') {
-      localStorage.setItem('business', 'Inmobiliaria Velasco');
-      localStorage.setItem('user', 'Velasco');
-      navigate('/Home');
-    } else alert('login incorrecto');
-  };
+    const login = (user, password) => {
+        if (user === '768946575' && password === '123456') {
+            localStorage.setItem('business', 'MegaHold Prime');
+            localStorage.setItem('user', 'MegaHold');
+            navigate('/Home');
+        } else if (user === '901235670' && password === '123456') {
+            localStorage.setItem('business', 'Inmobiliaria Velasco');
+            localStorage.setItem('user', 'Velasco');
+            navigate('/Home');
+        } else alert('login incorrecto');
+    };
 
-return (
+    return (
         <>
             <div className="bg-[url('./img/BG.jpg')] bg-cover w-full h-screen flex items-center justify-center flex-col">
                 <div className='bg-[#FAFBFC] backdrop-blur-xl bg-opacity-70 max-w-md drop-shadow-lg rounded-xl px-12 p-10 text-center w-96'>
                     <section className="flex items-center justify-center flex-col">
                         <a>
-                            <img src={logo} className="h-14" alt="Logo de Itaú"/>
+                            <img src={logo} className="h-14" alt="Logo de Itaú" />
                         </a>
                         <span className="py-6 inline-block text-base">Te damos la bienvenida al <br /> portal <b>Itaú Empresas</b></span>
                     </section>
