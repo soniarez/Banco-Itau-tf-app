@@ -53,7 +53,7 @@ const AuthMenu = () => {
     {
       field: 'autorize',
       headerName: 'Autorizar',
-      width: 70,
+      width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -83,7 +83,7 @@ const AuthMenu = () => {
     {
       field: 'reject',
       headerName: 'Rechazar',
-      width: 70,
+      width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -189,11 +189,11 @@ const AuthMenu = () => {
 
   return (
     <div className="flex flex-col ">
-      <h1 className="text-3xl text-[#003767] flex ml-6 my-6 font-bold font-sans">
+      <h1 className="text-3xl text-[#003767] flex ml-6 mt-6 font-bold font-sans">
         Autorizar Transacciones Multiempresa{' '}
       </h1>
       <section className="flex flex-col mt-6  justify-center items-center w-screen' ">
-        <div style={{ height: 450, width: 930 }}>
+        <div style={{ height: 450, width: 1000 }}>
           <DataGrid
             rowHeight={25}
             columns={columns}
@@ -211,7 +211,7 @@ const AuthMenu = () => {
             sx={{
               boxShadow: 0,
               border: 0,
-              fontSize: 11,
+              fontSize: 14,
               m: 2,
               borderColor: 'primary.light',
               '& .MuiDataGrid-cell:hover': {
