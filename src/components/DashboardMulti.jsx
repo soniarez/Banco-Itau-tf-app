@@ -154,7 +154,6 @@ const DashboardMulti = () => {
 
         /> </div>
       </div>
-    </div>
   );
 };
 
