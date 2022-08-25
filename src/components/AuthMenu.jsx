@@ -189,13 +189,13 @@ const AuthMenu = () => {
 
   return (
     <div>
-      <h1 className="ml-2 text-sm font-medium mt-1">
-        Autorizar Transacciones Multiempresa:{' '}
+      <h1 className='text-3xl text-[#003767] flex ml-2 my-6 font-bold font-sans'>
+        Autorizar Transacciones Multiempresa{' '}
       </h1>
 
-      <div className='flex flex-row h-screen w-screen' >
+      <div className='flex flex-col h-screen w-screen' >
         <div>
-          <div style={{height:430, width:"100%"}}>
+          <div style={{height:430, width:"60%"}}>
             <DataGrid
               rowHeight={25}
               columns={columns}
@@ -236,7 +236,7 @@ const AuthMenu = () => {
         </div>
 
         <div>
-          <div className='w-full'>
+          <div className='flex mt-6 justify-center' >
             <AuthMenuChart data={data} /> 
           </div>
         </div>
