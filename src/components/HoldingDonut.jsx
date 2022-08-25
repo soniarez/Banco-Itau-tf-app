@@ -104,7 +104,7 @@ console.log(data)
     const series = [chargeT, paymentT];
 
     return (
-        <div className={charge > payment ?'bg-[#FAFBFC] flex flex-col border border-[#2ECC71] rounded-2xl w-fit h-fit':'bg-[#FAFBFC] flex flex-col border border-[#FF5733] rounded-2xl w-fit h-fit'}>
+        <div className={charge > payment ?'bg-[#EDFFF5] flex flex-col border border-[#2ECC71] rounded-2xl w-fit h-fit mt-6':'bg-[#FFE3DD] flex flex-col border border-[#FF5733] rounded-2xl w-fit h-fit mt-6'}>
             <h1 className='text-3xl text-[#003767] flex justify-center my-6 font-bold font-sans'>Rentabilidad Holding</h1>
             <div>
                 <Chart options={options} series={series} type='donut' width='450px' />
