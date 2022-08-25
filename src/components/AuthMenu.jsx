@@ -57,15 +57,15 @@ const AuthMenu = () => {
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
-      renderCell: (params) => {
+      renderCell: params => {
         return (
           <div>
             {data ? (
               <div>
                 <Checkbox
-                  onChange={(e) => handleChangeAuthorized(e, params.row.docId)}
+                  onChange={e => handleChangeAuthorized(e, params.row.docId)}
                   checked={params.row.isAuthorized}
-                  size='small'
+                  size="small"
                   sx={{
                     '&.Mui-checked': {
                       color: '#5db761',
@@ -87,15 +87,15 @@ const AuthMenu = () => {
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
-      renderCell: (params) => {
+      renderCell: params => {
         return (
           <div>
             {data ? (
               <div>
                 <Checkbox
-                  onChange={(e) => handleChangeRejected(e, params.row.docId)}
+                  onChange={e => handleChangeRejected(e, params.row.docId)}
                   checked={params.row.isRejected}
-                  size='small'
+                  size="small"
                   sx={{
                     '&.Mui-checked': {
                       color: '#f44336',
@@ -114,8 +114,8 @@ const AuthMenu = () => {
 
   //GETTING DATA FROM FIREBASE
   useEffect(() => {
-    onSnapshot(collection(db, 'transaction'), (snapshot) => {
-      const dataFromFirestore = snapshot.docs.map((doc) => {
+    onSnapshot(collection(db, 'transaction'), snapshot => {
+      const dataFromFirestore = snapshot.docs.map(doc => {
         return {
           docId: doc.id,
           isAuthorized: false,
@@ -129,8 +129,8 @@ const AuthMenu = () => {
 
   //HANDLECHANGE AUTHORIZE
   const handleChangeAuthorized = (e, docId) => {
-    setData((prevState) => [
-      ...prevState.map((element) => {
+    setData(prevState => [
+      ...prevState.map(element => {
         return element.docId === docId
           ? {
               ...element,
@@ -143,8 +143,8 @@ const AuthMenu = () => {
 
   //HANDLECHANGE REJECT
   const handleChangeRejected = (e, docId) => {
-    setData((prevState) => [
-      ...prevState.map((element) => {
+    setData(prevState => [
+      ...prevState.map(element => {
         return element.docId === docId
           ? {
               ...element,
@@ -156,21 +156,19 @@ const AuthMenu = () => {
   };
 
   //FILTERING PENDING
-  const pendingTransactions = data.filter((item) => {
+  const pendingTransactions = data.filter(item => {
     return item.status === 'pendiente';
   });
 
   //EXECUTE TRANSACTION
   const sendTransaction = () => {
     const authorizeTransactions = data.filter(
-      (item) => item.isAuthorized === true
+      item => item.isAuthorized === true
     );
-    const rejectedTransactions = data.filter(
-      (item) => item.isRejected === true
-    );
+    const rejectedTransactions = data.filter(item => item.isRejected === true);
 
     if (authorizeTransactions) {
-      const authorizeArr = authorizeTransactions.map((item) => {
+      const authorizeArr = authorizeTransactions.map(item => {
         const sendTransaction = doc(db, 'transaction', item.docId);
 
         updateDoc(sendTransaction, {
@@ -180,7 +178,7 @@ const AuthMenu = () => {
     }
 
     if (rejectedTransactions) {
-      const rejectedArr = rejectedTransactions.map((item) => {
+      const rejectedArr = rejectedTransactions.map(item => {
         const sendTransaction = doc(db, 'transaction', item.docId);
         updateDoc(sendTransaction, {
           status: 'rechazada',
@@ -190,13 +188,12 @@ const AuthMenu = () => {
   };
 
   return (
-    <div>
-      <h1 className='text-3xl text-[#003767] flex ml-2 my-6 font-bold font-sans'>
+    <div className="flex flex-col ">
+      <h1 className="text-3xl text-[#003767] flex ml-6 my-6 font-bold font-sans">
         Autorizar Transacciones Multiempresa{' '}
       </h1>
-
-      <div className='flex flex-col h-screen w-screen'>
-        <div style={{ height: 430, width: '60%' }}>
+      <section className="flex flex-col mt-6  justify-center items-center w-screen' ">
+        <div style={{ height: 450, width: 930 }}>
           <DataGrid
             rowHeight={25}
             columns={columns}
@@ -225,20 +222,19 @@ const AuthMenu = () => {
                 bgcolor: '#B4B4B4',
               },
             }}
-            getRowClassName={(params) => `itau-app-${params.row.amount}`}
+            getRowClassName={params => `itau-app-${params.row.amount}`}
           />
         </div>
         <button
-          className='ml-3 bg-[#f89719] border-[#ec7e00fd] border text-[#0c0902b2] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]'
+          className=" ml-3 -mt-5 bg-[#f89719] border-[#ec7e00fd] border text-[#0c0902b2] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]"
           onClick={() => sendTransaction()}
         >
           Ejecutar
         </button>
-
-        <div className='flex  mt-6 ml-96'>
+        <div className="flex my-6 w-screen justify-center items-center">
           <AuthMenuChart data={data} />
         </div>
-      </div>
+      </section>
     </div>
   );
 };

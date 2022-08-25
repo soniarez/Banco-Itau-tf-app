@@ -2,16 +2,16 @@ import React from 'react';
 import NavBar from '../components/NavBar';
 import SideBar from '../components/SideBar';
 import Footer from '../components/Footer';
-import Center from '../components/Center';
+import AuthMenu from '../components/AuthMenu';
 
 const Authorization = () => {
   return (
-    <div>
+    <div >
       <NavBar />
       <div className="flex">
         <SideBar />
-        <div>
-          <Center />
+        <div className='flex justify-center items-center'>
+        <AuthMenu />
         </div>
       </div>
       <Footer />

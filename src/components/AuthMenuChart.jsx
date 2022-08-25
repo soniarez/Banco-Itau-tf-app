@@ -10,18 +10,17 @@ const AuthMenuChart = ({ data }) => {
     {
       name: 'Pendientes',
       data: [pending.length],
-      color: "#7cb0f7"
-      
+      color: "#fdbc3a"
     },
     {
       name: 'Aprobadas',
       data: [approved.length],
-      color: "#4caf50"
+      color: "#26e7a6"
     },
     {
       name: 'Rechazadas',
       data: [rejected.length],
-      color: "#ff5733"
+      color: "#ff6178"
     },
   ];
 
@@ -32,6 +31,7 @@ const AuthMenuChart = ({ data }) => {
     plotOptions: {
       bar: {
         horizontal: true,
+        barHeight: "40%",
       },
       tooltip: {
         followCursor:true,
@@ -45,20 +45,25 @@ const AuthMenuChart = ({ data }) => {
         formatter:(val) =>{
           return `${val}`
         }
-      }
+      },
     },
     title: {
       text: "Transacciones Empresa",
       style:{
         fontSize: 12,
       }
-    }
+    },
+    stroke: {
+      show: true,
+      width: 3,
+      colors: ['#fff']
+    },
   };
 
   return (
     <div className='donut'>
-      <div className=' flex align-top justify-center h-auto w-auto'>
-        <Chart options={options} series={series} type='bar' width='380' />
+      <div className=' flex justify-center mt-6' >
+        <Chart options={options} series={series} type='bar' width='650' height='300'/>
       </div>
     </div>
   );

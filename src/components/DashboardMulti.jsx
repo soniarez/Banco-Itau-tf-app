@@ -144,10 +144,10 @@ const DashboardMulti = () => {
               bgcolor: '#B4B4B4',
             },
             '& .in': {
-              backgroundColor: '#93cf96',
+              color: '#93cf96',
             },
             '& .out': {
-              backgroundColor: '#f5554a',
+              color: '#f5554a',
             },
           }}
           getRowClassName={(params) => `itau-app-${params.row.amount}`}
