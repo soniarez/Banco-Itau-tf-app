@@ -50,7 +50,7 @@ const NavBar = () => {
                 <img className='py-2 h-10' src={empresa} alt='Logo Empresa' />
               </a>
               <h1 className='text-[#EC7000] text-sm font-bold font-sans'>
-              Wholesale Digital Banking
+              Digital Banking Solutions
               </h1>
             </div>
           </section>
