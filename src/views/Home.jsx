@@ -18,7 +18,7 @@ const Home = () => {
             <HoldingDonut />
           </section>
           <div className='flex flex-col items-center mb-6'>
-            <h1 className='text-3xl text-[#003767] flex ml-2 my-6 font-bold font-sans'>Resumen de empresas</h1>
+            <h1 className='text-3xl text-[#003767] flex ml-2 my-6 font-bold font-sans'>Resumen de Empresas</h1>
             <section className='flex flex-row border-t  border-[#D8D8D8]'>
               <Donut business={'MegaHold Prime'} />
               <Donut business={'Inversiones Latinoamericanas'} />
