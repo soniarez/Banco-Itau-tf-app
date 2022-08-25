@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
+import { onSnapshot, collection, db } from '../firebase/init';
 import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
 
 const Mycompanies = () => {
   const [companiesData, setCompaniesData] = useState([]);
-
-  //console.log('companie', companiesData);
 
   useEffect(() => {
     onSnapshot(collection(db, 'companies'), snapshot => {
@@ -54,7 +52,7 @@ const Mycompanies = () => {
     },
     {
       field: 'aliascompany',
-      headerName: 'Alias Empresa',
+      headerName: 'Editar Alias Empresa',
       width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
@@ -79,7 +77,7 @@ const Mycompanies = () => {
     },
     {
       field: 'aliascta',
-      headerName: 'Alias Cuenta',
+      headerName: 'Editar Alias Cuenta',
       width: 120,
       headerAlign: 'center',
       headerClassName: 'itau-app',

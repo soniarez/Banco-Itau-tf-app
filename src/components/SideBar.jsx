@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//
+
 const SideBar = () => {
   return (
     <div className='text-gray-700 w-[200px] h-screen shadow border bg-gray-100'>
