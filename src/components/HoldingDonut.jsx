@@ -1,5 +1,9 @@
 import Chart from 'react-apexcharts';
 import React from "react";
+import { right } from '@popperjs/core';
+import { flexbox, grid } from '@mui/system';
+import { getRowIdFromRowModel } from '@mui/x-data-grid/hooks/features/rows/gridRowsUtils';
+import { FloodTwoTone } from '@mui/icons-material';
 
 const HoldingDonut = () => {
     const options = {
@@ -7,7 +11,8 @@ const HoldingDonut = () => {
         title: { text: 'Rentabilidad Holding' },
         colors: ['#2ECC71', '#FF5733'],
         dataLabels: {
-            style:{
+            style:{ 
+                    position: 'bottom',
                 colors:['#003767']
             }
         },

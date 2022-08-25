@@ -27,8 +27,9 @@ const AuthMenuChart = ({ data }) => {
 
   return (
     <div className='donut'>
+       <div className=' flex align-top justify-end '>
       <Chart options={options} series={series} type='pie' width='380' />
-    </div>
+    </div></div>
   );
 };
 

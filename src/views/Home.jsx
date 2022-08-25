@@ -14,10 +14,12 @@ const Home = () => {
       <div className='main-grid'>
         <SideBar />
         <div>
+          <div className='flex justify-center'>
           <h1>HOME</h1>  
           <WidgetsAuth />
           <HoldingDonut />
           {/* <Center /> */}
+        </div>
         </div>
       </div>
       <Footer />
