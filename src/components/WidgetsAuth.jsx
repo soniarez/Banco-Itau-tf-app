@@ -28,7 +28,7 @@ const WidgetsAuth = () => {
     };
 
     return (
-        <div className='flex flex-col mr-8 ml-6'>
+        <div className='flex flex-col mr-8 mt-6'>
         <a>
             <img src={wellcome} alt="banner bienvenida" className='rounded-2xl'/>
         </a>

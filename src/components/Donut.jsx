@@ -11,6 +11,10 @@ const Donut = ({segment}) => {
     const [paymentT, setPaymentT] = useState([]);
     const navigate = useNavigate()
 
+    const name= segment
+
+    console.log(name)
+
     useEffect(() => {
         onSnapshot(collection(db, 'movements'), (snapshot) => {
             const dataFromFirestore = snapshot.docs.map((doc) => {
@@ -30,10 +34,11 @@ const Donut = ({segment}) => {
         totalCharge()
     }, [payment]);
 
-    const filterData = (segment) => {
-        const charge = data.filter(item => item.charge !== '-' & item.segment == segment);
+    const filterData = () => {
+        const charge = data.filter(item => item.charge !== '-' & item.segment == name);
+        console.log(segment, 'segme?')
         setCharge(charge);
-        const payment = data.filter(item => item.payment !== '-' & item.segment == segment)
+        const payment = data.filter(item => item.payment !== '-' & item.segment == name)
         setPayment(payment)
     };
 
@@ -51,11 +56,11 @@ const Donut = ({segment}) => {
     }
 
     const options = {
-        labels: ['Abono', 'Cargo'],
+        labels: ['Ganancia', 'Inversión'],
         legend: {
             position: 'left',
             horizontalAlign: 'left',
-            fontSize: '20px'
+            fontSize: '14px'
         }, responsive: [
             {
                 breakpoint: 800,
@@ -81,7 +86,7 @@ const Donut = ({segment}) => {
             customScale: 0.8,
             pie: {
                 donut: {
-                    size: '45%'
+                    size: '55%'
                 }
             }
         },
@@ -89,7 +94,7 @@ const Donut = ({segment}) => {
             style: {
                 colors: ['#FAFBFC'],
                 fontWeight: 'bold',
-                fontSize: '20px',
+                fontSize: '14px',
             },
             dropShadow: {
                 enabled: true,
@@ -104,16 +109,11 @@ const Donut = ({segment}) => {
     const series = [chargeT, paymentT];
 
     return (
-        <div className={charge > payment ?'bg-[#FAFBFC] flex flex-col border border-[#2ECC71] rounded-2xl w-fit h-fit':'bg-[#FAFBFC] flex flex-col border border-[#FF5733] rounded-2xl w-fit h-fit'}>
-            <h1 className='text-3xl text-[#003767] flex justify-center my-6 font-bold font-sans'>Rentabilidad Holding</h1>
+        <div className={charge > payment ?'bg-[#EDFFF5] flex flex-col border border-[#2ECC71] rounded-2xl w-fit h-fit ml-6 my-6':'bg-[#FAFBFC] flex flex-col border border-[#FFE3DD] rounded-2xl w-fit ml-6 my-6 h-fit'}>
+            <h1 className='text-2xl text-[#003767] flex justify-center my-6 font-bold font-sans'>{segment}</h1>
             <div>
-                <Chart options={options} series={series} type='donut' width='450px' />
+                <Chart options={options} series={series} type='donut' width='350px' />
             </div>
-            <section className='flex justify-end'>
-                <div className='mr-6 mb-3 h-8 w-20 group ml-20 '>
-                    <button onClick={() => navigate('/movements')} className='text-[#007ab7] group-hover:text-[#003767]'>Ver mas → </button>
-                </div>
-            </section>
         </div>
     )
 }
