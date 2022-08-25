@@ -78,7 +78,7 @@ const Mycompanies = () => {
     {
       field: 'aliascta',
       headerName: 'Editar Alias Cuenta',
-      width: 120,
+      width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -87,7 +87,7 @@ const Mycompanies = () => {
     {
       field: 'numerocta',
       headerName: 'Cuenta Corriente',
-      width: 130,
+      width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -97,7 +97,7 @@ const Mycompanies = () => {
   return (
     <div className='flex flex-col'>
       <h1 className='text-3xl text-[#003767] flex ml-6 mt-6 font-bold font-sans'>Mis Empresas </h1>
-      <section className="flex mt-6 -ml-8 justify-center h-screen w-screen ">
+      <section className="flex mt-6 -ml-12 justify-center h-screen w-screen ">
         <div style={{ height: 750, width: 1100 }}>
           <DataGrid
             rows={normalizedData}
