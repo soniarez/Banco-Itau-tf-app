@@ -104,7 +104,7 @@ const DashboardMulti = () => {
           getRowClassName={(params) => `itau-app-${params.row.amount}`}
         /> </div>
       </div>
-      </div>
+      
   );
 };
 

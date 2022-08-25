@@ -21,52 +21,7 @@ const Login = () => {
     };
 
 
-  return (
-    <>
-      <div className="bg-[url('/BG.jpg')] bg-cover w-full h-screen flex items-center justify-center flex-col">
-        <div className='bg-[#FAFBFC] backdrop-blur-xl bg-opacity-70 max-w-md drop-shadow-lg rounded-xl px-12 p-10 text-center w-96'>
-          <section className='flex items-center justify-center flex-col'>
-            <a>
-              <img src='/logo.png' className='h-14' />
-            </a>
-            <span className='py-6 inline-block text-base'>
-              Te damos la bienvenida al <br /> portal <b>Itaú Empresas</b>
-            </span>
-          </section>
-          <form
-            onSubmit={(ev) => {
-              ev.preventDefault();
-              login(user, password);
-            }}
-          >
-            <label className='text-[#43484C] text-sm flex justify-start mb-2'>
-              Ingresa tu RUT usuario
-            </label>
-            <input
-              className='bg-[#EEEEEE] bg-opacity-70 backdrop-blur-xl h-10 w-full mb-6 border-[#B4B4B4] border rounded'
-              type='text'
-              name='user'
-              value={user}
-              onChange={(ev) => setUser(ev.target.value)}
-            ></input>
-            <label className='text-[#43484C] text-sm flex justify-start mb-2'>
-              Ingresa tu clave internet
-            </label>
-            <input
-              className='bg-[#EEEEEE] bg-opacity-70 backdrop-blur-xl h-10 w-full mb-6 border-[#B4B4B4] border rounded'
-              type='password'
-              name='password'
-              value={password}
-              onChange={(ev) => setPassword(ev.target.value)}
-            ></input>
-            <div className='group'>
-              <button
-                type='submit'
-                className='bg-[#EEEEEE] bg-opacity-70 border-[#EC7000] border text-[#EC7000] h-10 w-full text-sm rounded-xl hover:bg-[#EC7000] group-hover:text-[#EEEEEE]'
-              >
-                Ingresar
-              </button>
-
+  
     return (
         <>
             <div className="bg-[url('./img/BG.jpg')] bg-cover w-full h-screen flex items-center justify-center flex-col">
