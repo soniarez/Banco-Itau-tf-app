@@ -8,11 +8,11 @@ const SideBar = () => {
   
     <div className=' bg-gray-200 text-gray-700 w-[180px] h-screen shadow border '> 
 <div className="flex flex-col items-center w-45 h-full overflow-hidden text-gray-700 bg-gray-100 rounded">
-		<div className="flex items-center w-full px-3 mt-3">
+		<Link to='/home' className="flex items-center w-full px-3 mt-3 h-14 rounded hover:bg-gray-300">
 			<svg className="w-8 h-8 fill-current"  viewBox="0 0 20 20" fill="currentColor">
 				</svg>
 			<div className="ml-2 text-sm font-bold">Dashboard Multiempresa</div>
-		</div>
+		</Link>
 		
 		<div className="w-full px-2">
 			<div className="flex flex-col items-center w-full mt-3 border-t border-gray-300">

@@ -5,10 +5,11 @@ import {
   GridToolbar,
   esES,
 } from '@mui/x-data-grid';
+import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AuthMenuChart from './AuthMenuChart';
 import '../../src/App.css';
@@ -74,7 +75,7 @@ const AuthMenu = () => {
       width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'justify',
+      align: 'left',
     },
     {
       field: 'company',
@@ -82,7 +83,7 @@ const AuthMenu = () => {
       width: 170,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'justify',
+      align: 'left',
     },
     {
       field: 'origen',
@@ -98,7 +99,7 @@ const AuthMenu = () => {
       width: 168,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'justify',
+      align: 'left',
     },
     {
       field: 'amount',
@@ -120,17 +121,18 @@ const AuthMenu = () => {
           <div>
             {data ? (
               <div>
-                <Checkbox
+               {/*  <Checkbox
                   size="small"
-                  icon={<ExpandMoreIcon />}
-                  checkedIcon={<ExpandMoreIcon />}
+                  icon={<FolderOpenIcon/>}
+                  checkedIcon={<FolderOpenIcon />}
                   sx={{
                     '&.Mui-checked': {
                       
                       color: '#F1AE2F',
                     },
                   }}
-                />
+                /> */}
+                <Button variant="outlined">Más detalles</Button>
               </div>
             ) : (
               <p>Data is loading...</p>
@@ -289,12 +291,15 @@ const AuthMenu = () => {
           </button>
        
       </div>
+
       <div style={{ height: 430, width: '66%' }}>
+
         <DataGrid
           rowHeight={25}
           columns={columns}
           rows={pendingTransactions}
           pageSize={10}
+          rowsPerPageOptions={[10]}
           components={{ Toolbar: GridToolbar }}
           componentsProps={{
             toolbar: {

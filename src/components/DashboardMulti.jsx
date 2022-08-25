@@ -12,7 +12,7 @@ const DashboardMulti = () => {
     {
       field: 'date',
       headerName: 'Fecha y Hora',
-      width: 150,
+      width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -20,7 +20,7 @@ const DashboardMulti = () => {
     {
       field: 'codemov',
       headerName: 'Codigo Movimiento',
-      width: 200,
+      width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -28,10 +28,10 @@ const DashboardMulti = () => {
     {
       field: 'description',
       headerName: 'Descripcion',
-      width: 130,
+      width: 215,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'justify',
+      align: 'left',
     },
     {
       field: 'branch',
@@ -44,18 +44,18 @@ const DashboardMulti = () => {
     {
       field: 'payment',
       headerName: 'Abono',
-      width: 150,
+      width: 105,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'justify',
+      align: 'left',
     },
     {
       field: 'charge',
       headerName: 'Cargo',
-      width: 150,
+      width: 115,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'justify',
+      align: 'left',
     },
   ];
 
@@ -75,13 +75,16 @@ const DashboardMulti = () => {
   return (
     <div>
       <h2>Autorizar Transacciones Multiempresa: </h2>
-      <div className='main-pie'>
+
+    
       <div style={{ height: 450, width: '970px'   }}>
+
         <DataGrid
           rowHeight={25}
           columns={columns}
           rows={movementsData}
           pageSize={20}
+          rowsPerPageOptions={[20]}
           components={{ Toolbar: GridToolbar }}
           componentsProps={{
             toolbar: {
@@ -92,7 +95,7 @@ const DashboardMulti = () => {
           localeText={esES.components.MuiDataGrid.defaultProps.localeText}
           sx={{
             boxShadow: 2,
-            fontSize: 12,
+            fontSize: 11,
             m: 2,
             '& .itau-app-USD': {
               bgcolor: '#B4B4B4',
