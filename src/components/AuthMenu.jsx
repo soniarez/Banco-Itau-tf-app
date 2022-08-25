@@ -5,10 +5,11 @@ import {
   GridToolbar,
   esES,
 } from '@mui/x-data-grid';
+import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AuthMenuChart from './AuthMenuChart';
 import '../../src/App.css';
@@ -74,7 +75,7 @@ const AuthMenu = () => {
       width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'justify',
+      align: 'left',
     },
     {
       field: 'company',
@@ -82,7 +83,7 @@ const AuthMenu = () => {
       width: 170,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'justify',
+      align: 'left',
     },
     {
       field: 'origen',
@@ -98,7 +99,7 @@ const AuthMenu = () => {
       width: 168,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'justify',
+      align: 'left',
     },
     {
       field: 'amount',
@@ -111,7 +112,7 @@ const AuthMenu = () => {
     {
       field: 'details',
       headerName: 'Detalles',
-      width: 70,
+      width: 65,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -120,16 +121,18 @@ const AuthMenu = () => {
           <div>
             {data ? (
               <div>
-                <Checkbox
+               {/*  <Checkbox
                   size="small"
-                  icon={<ExpandMoreIcon />}
-                  checkedIcon={<ExpandMoreIcon />}
+                  icon={<FolderOpenIcon/>}
+                  checkedIcon={<FolderOpenIcon />}
                   sx={{
                     '&.Mui-checked': {
+                      
                       color: '#F1AE2F',
                     },
                   }}
-                />
+                /> */}
+                <Button variant="outlined">Más detalles</Button>
               </div>
             ) : (
               <p>Data is loading...</p>
@@ -141,7 +144,7 @@ const AuthMenu = () => {
     {
       field: 'autorize',
       headerName: 'Autorizar',
-      width: 65,
+      width: 70,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -171,7 +174,7 @@ const AuthMenu = () => {
     {
       field: 'reject',
       headerName: 'Rechazar',
-      width: 65,
+      width: 70,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -279,15 +282,24 @@ const AuthMenu = () => {
     <div>
       <h2>Autorizar Transacciones Multiempresa: </h2>
       <div className="flex flex-row justify-evenly">
-        <button>Aceptar Todo</button>
-        <button>Rechazar Todo</button>
+    
+          <button className='mr-12 bg-[#FFFFFF] border-[#6aec00fd] border text-[#00ec1fb2] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]'>
+           Aceptar todo
+          </button>
+          <button className='mr-12 bg-[#FFFFFF] border-[#ec1000] border text-[#ec2f00] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]'>
+           Rechazar todo
+          </button>
+       
       </div>
-      <div style={{ height: 450, width: '88%' }}>
+
+      <div style={{ height: 430, width: '66%' }}>
+
         <DataGrid
           rowHeight={25}
           columns={columns}
           rows={pendingTransactions}
           pageSize={10}
+          rowsPerPageOptions={[10]}
           components={{ Toolbar: GridToolbar }}
           componentsProps={{
             toolbar: {
@@ -308,9 +320,12 @@ const AuthMenu = () => {
           getRowClassName={params => `itau-app-${params.row.amount}`}
         />
       </div>
-      <button onClick={() => sendTransaction()}>Ejecutar</button>
+      <button className='mr-12 bg-[#f89719] border-[#ec7e00fd] border text-[#0c0902b2] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]'
+          onClick={() => sendTransaction()}>Ejecutar</button>
       <div>
+        <div className='flex-1'>
         <AuthMenuChart data={data} />
+      </div>
       </div>
     </div>
   );
