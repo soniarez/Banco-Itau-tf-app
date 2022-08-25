@@ -4,8 +4,6 @@ import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import AuthMenuChart from './AuthMenuChart';
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
 import '../../src/App.css';
 
 const AuthMenu = () => {
