@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
 import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
 import Selection from './Selection';
-import Select from 'react-select';
 
 const DashboardMulti = () => {
   const [movementsData, setMovementsData] = useState([]);
