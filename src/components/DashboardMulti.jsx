@@ -109,13 +109,13 @@ const DashboardMulti = () => {
 
   return (
     <div>
-      <h2>Autorizar Transacciones Multiempresa: </h2>
+      <h1 className='ml-2 text-sm font-medium mt-1' >Últimos Movimientos: </h1>
       <div>
-        <div>
+        <div className='ml-2 text-sm font-small mt-1'>
           <Selection companiesData={companiesData} />
         </div>
       </div>
-      <div style={{ height: 450, width: '96%' }}>
+      <div style={{ height: 450, width: '100%' }}>
         <DataGrid
           rowHeight={25}
           columns={columns}
@@ -130,9 +130,14 @@ const DashboardMulti = () => {
           }}
           localeText={esES.components.MuiDataGrid.defaultProps.localeText}
           sx={{
-            boxShadow: 2,
-            fontSize: 12,
+            boxShadow: 0,
+            border: 0,
+            fontSize: 11,
             m: 2,
+            borderColor: 'primary.light',
+          '& .MuiDataGrid-cell:hover': {
+            color: 'primary.main',
+          },
             '& .itau-app-USD': {
               bgcolor: '#B4B4B4',
             },
