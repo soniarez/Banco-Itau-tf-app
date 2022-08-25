@@ -2,9 +2,9 @@ import React from 'react';
 import Chart from 'react-apexcharts';
 
 const AuthMenuChart = ({ data }) => {
-  const pending = data.filter(item => item.status === 'pendiente');
-  const approved = data.filter(item => item.status === 'aprobada');
-  const rejected = data.filter(item => item.status === 'rechazada');
+  const pending = data.filter((item) => item.status === 'pendiente');
+  const approved = data.filter((item) => item.status === 'aprobada');
+  const rejected = data.filter((item) => item.status === 'rechazada');
 
   const series = [
     {
@@ -19,7 +19,7 @@ const AuthMenuChart = ({ data }) => {
     },
     plotOptions: {
       bar: {
-        horizontal: true, 
+        horizontal: true,
       },
     },
     xaxis: {
@@ -28,9 +28,9 @@ const AuthMenuChart = ({ data }) => {
   };
 
   return (
-    <div className="donut">
-      <div className=" flex align-top justify-end ">
-        <Chart options={options} series={series} type="bar" width="380" />
+    <div className='donut'>
+      <div className=' flex align-top justify-center h-auto w-auto'>
+        <Chart options={options} series={series} type='bar' width='380' />
       </div>
     </div>
   );
