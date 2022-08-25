@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
 import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
-import Selection from './Selection';
+
 
 const DashboardMulti = () => {
   const [movementsData, setMovementsData] = useState([]);
@@ -75,7 +75,7 @@ const DashboardMulti = () => {
     {
       field: 'charge',
       headerName: 'Cargo',
-      width: 140,
+      width: 160,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'left',
@@ -110,12 +110,8 @@ const DashboardMulti = () => {
   return (
     <div>
       <h1 className='ml-2 text-sm font-medium mt-1' >Últimos Movimientos: </h1>
-      <div>
-        <div className='ml-2 text-sm font-small mt-1'>
-          <Selection companiesData={companiesData} />
-        </div>
-      </div>
-      <div style={{ height: 450, width: '100%' }}>
+    
+      <div style={{ height: 450, width: '98%' }}>
         <DataGrid
           rowHeight={25}
           columns={columns}

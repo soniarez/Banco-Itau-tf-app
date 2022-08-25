@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
-import { DataGrid } from '@mui/x-data-grid';
-import NavBar from '../components/NavBar';
-import SideBar from '../components/SideBar';
-import Footer from '../components/Footer';
-import { FaRegEdit } from 'react-icons/fa';
+import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
 
 const Mycompanies = () => {
   const [companiesData, setCompaniesData] = useState([]);
@@ -12,8 +8,8 @@ const Mycompanies = () => {
   //console.log('companie', companiesData);
 
   useEffect(() => {
-    onSnapshot(collection(db, 'companies'), (snapshot) => {
-      const companieDataFromFirestore = snapshot.docs.map((doc) => {
+    onSnapshot(collection(db, 'companies'), snapshot => {
+      const companieDataFromFirestore = snapshot.docs.map(doc => {
         return {
           docId: doc.id,
           ...doc.data(),
@@ -39,21 +35,19 @@ const Mycompanies = () => {
     })
     .flat(2);
 
-  console.log('normalized', normalizedData);
-
   const columns = [
     {
       field: 'rut',
       headerName: 'Rut',
-      width: 150,
+      width: 135,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'left',
+      align: 'center',
     },
     {
       field: 'Razon social',
       headerName: 'Razon Social',
-      width: 150,
+      width: 200,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'left',
@@ -64,7 +58,7 @@ const Mycompanies = () => {
       width: 150,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'left',
+      align: 'center',
       editable: true,
     },
     {
@@ -78,59 +72,66 @@ const Mycompanies = () => {
     {
       field: 'tipocta',
       headerName: 'Tipo de Cuenta',
-      width: 170,
+      width: 160,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'left',
+      align: 'center',
     },
     {
       field: 'aliascta',
       headerName: 'Alias Cuenta',
-      width: 150,
+      width: 120,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'left',
+      align: 'center',
       editable: true,
     },
     {
       field: 'numerocta',
       headerName: 'Cuenta Corriente',
-      width: 170,
+      width: 130,
       headerAlign: 'center',
       headerClassName: 'itau-app',
-      align: 'left',
+      align: 'center',
     },
   ];
 
-  //   const companyUser = [
-  //     {
-  //       Rut: '76.894.657-5',
-  //       'Razon Social': 'MegaHold Prime',
-  //       Segmento: 'Corporate Invesment Banking',
-  //       accounts: [
-  //         { numerocta: '210456783', tipocta: 'Cuenta Pesos' },
-  //         { numerocta: '217683922', tipocta: 'Cuenta Pesos' },
-  //         { numerocta: '229875367', tipocta: 'Cuenta Pesos' },
-  //       ],
-  //     },
-  //   ];
-
   return (
     <div>
-      <NavBar />
-      <div className='main-grid'>
-        <SideBar />
-        <div className='mt-4'>
-          <div style={{ height: 430, width: '100%' }}>
-            <DataGrid
-              rows={normalizedData}
-              columns={columns}
-              experimentalFeatures={{ newEditingApi: true }}
-            />
-          </div>
+      <h1 className="ml-2 text-sm font-medium mt-1">Mis Empresas: </h1>
+      <div className="flex flex-row justify-center h-screen w-screen' ">
+        <div style={{ height: 430, width: '82%' }}>
+          <DataGrid
+            rows={normalizedData}
+            columns={columns}
+            experimentalFeatures={{ newEditingApi: true }}
+            rowHeight={30}
+            pageSize={20}
+            rowsPerPageOptions={[20]}
+            components={{ Toolbar: GridToolbar }}
+            componentsProps={{
+              toolbar: {
+                showQuickFilter: true,
+                quickFilterProps: { debounceMs: 500 },
+              },
+            }}
+            sx={{
+              boxShadow: 0,
+              border: 0,
+              fontSize: 11,
+              m: 2,
+              borderColor: 'primary.light',
+              '& .MuiDataGrid-cell:hover': {
+                color: 'primary.main',
+              },
+              '& .itau-app-USD': {
+                bgcolor: '#B4B4B4',
+              },
+            }}
+            localeText={esES.components.MuiDataGrid.defaultProps.localeText}
+          />
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

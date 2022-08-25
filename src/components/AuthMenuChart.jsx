@@ -2,34 +2,37 @@ import React from 'react';
 import Chart from 'react-apexcharts';
 
 const AuthMenuChart = ({ data }) => {
-  const pending = data.filter((item) => item.status === 'pendiente');
-  const approved = data.filter((item) => item.status === 'aprobada');
-  const rejected = data.filter((item) => item.status === 'rechazada');
+  const pending = data.filter(item => item.status === 'pendiente');
+  const approved = data.filter(item => item.status === 'aprobada');
+  const rejected = data.filter(item => item.status === 'rechazada');
+
+  const series = [
+    {
+      name: 'Height in feet',
+      data: [pending.length, approved.length, rejected.length],
+    },
+  ];
 
   const options = {
-    labels: ['Pendientes', 'Autorizadas', 'Rechazadas'],
-    title: { text: 'Resumen de Autorizaciones' },
-    // tooltip: {
-    //   y: {
-    //     formatter: (val) => {
-    //       return `${val}`;
-    //     },
-    //   },
-    // },
-    colors: ['#ffb64c', '#6fbf73', '#f5554a'],
-    dataLabels: {
-      formatter: function (val, opts) {
-        return opts.w.config.series[opts.seriesIndex];
+    chart: {
+      id: 'simple-bar',
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true, 
       },
     },
+    xaxis: {
+      categories: ['Pendientes', 'Autorizadas', 'Rechazadas'],
+    },
   };
-  const series = [pending.length, approved.length, rejected.length];
 
   return (
-    <div className='donut'>
-       <div className=' flex align-top justify-end '>
-      <Chart options={options} series={series} type='pie' width='380' />
-    </div></div>
+    <div className="donut">
+      <div className=" flex align-top justify-end ">
+        <Chart options={options} series={series} type="bar" width="380" />
+      </div>
+    </div>
   );
 };
 
