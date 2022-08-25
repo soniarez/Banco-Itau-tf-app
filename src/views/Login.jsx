@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useCallback, useEffect } from 'react';
+import logo from '../img/logo.png';
 
 const Login = () => {
   const [user, setUser] = useState('');
@@ -19,13 +20,36 @@ const Login = () => {
     } else alert('login incorrecto');
   };
 
+  //Login Firebase
+  // const firebaseLogin = useCallback(async () => {
+  //   try {
+  //     const response = await signInWithEmailAndPassword(auth, email, pass);
+  //     console.log(response.user);
+
+  //     if (response.user.email === 'alberto@megahold.com') {
+  //       navigate('/Home');
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //     if (error.code === 'auth/invalid-email') {
+  //       setError('Verifica tus datos');
+  //     }
+  //     if (error.code === 'auth/wrong-password') {
+  //       setError('Verifica tus datos');
+  //     }
+  //     if (error.code === 'auth/user-not-found') {
+  //       setError('Correo no registrado');
+  //     }
+  //   }
+  // }, [email, pass, history]);
+
   return (
     <>
       <div className="bg-[url('./public/BG.jpg')] bg-cover w-full h-screen flex items-center justify-center flex-col">
         <div className='bg-[#FAFBFC] backdrop-blur-xl bg-opacity-70 max-w-md drop-shadow-lg rounded-xl px-12 p-10 text-center w-96'>
           <section className='flex items-center justify-center flex-col'>
             <a>
-              <img src='./public/logo.png' className='h-14' />
+              <img src={logo} className='h-14' />
             </a>
             <span className='py-6 inline-block text-base'>
               Te damos la bienvenida al <br /> portal <b>Itaú Empresas</b>
