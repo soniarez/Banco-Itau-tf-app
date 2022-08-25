@@ -5,7 +5,7 @@ import Link from '@mui/material/Link'
 
 const Footer = () => {
   return (
-    <div className='bg-orange-100 text-gray-700  bottom-0 p-4 flex justify-between min-w-[600px] h-[91px] '>
+    <div className='bg-[#003767] text-[#EEEEEE]   bottom-0 p-4 flex justify-between min-w-[600px] h-[91px] '>
       <section className='mx-14 flex items-center'>
           <p>  Infórmese sobre la garantía estatal de los depósitos en su banco o en  <Link href="#" underline="hover">
             {'www.cmfchile.cl'}

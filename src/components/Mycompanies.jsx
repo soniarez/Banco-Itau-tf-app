@@ -5,8 +5,6 @@ import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
 const Mycompanies = () => {
   const [companiesData, setCompaniesData] = useState([]);
 
-  //console.log('companie', companiesData);
-
   useEffect(() => {
     onSnapshot(collection(db, 'companies'), snapshot => {
       const companieDataFromFirestore = snapshot.docs.map(doc => {
@@ -98,9 +96,9 @@ const Mycompanies = () => {
 
   return (
     <div>
-      <h1 className="ml-2 text-sm font-medium mt-1">Mis Empresas: </h1>
-      <div className="flex flex-row justify-center h-screen w-screen' ">
-        <div style={{ height: 430, width: '82%' }}>
+      <h1 className='text-3xl text-[#003767] flex ml-10 mt-6 font-bold font-sans'>Mis Empresas </h1>
+      <section className="flex flex-row ml-10 mt-6  justify-center h-screen w-screen' ">
+        <div style={{ height: 550, width: 1100 }}>
           <DataGrid
             rows={normalizedData}
             columns={columns}
@@ -131,7 +129,7 @@ const Mycompanies = () => {
             localeText={esES.components.MuiDataGrid.defaultProps.localeText}
           />
         </div>
-      </div>
+      </section>
     </div>
   );
 };
