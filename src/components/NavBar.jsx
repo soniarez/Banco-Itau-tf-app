@@ -60,7 +60,7 @@ const NavBar = () => {
             <a className='bg-[#EEEEEE] rounded-[100%] h-10 w-10 flex items-center justify-center mr-2'>
               <img className='py-2 h-[35px]' src={usuario} alt='Logo Usuario' />
             </a>
-            <h1 className='text-sm font-bold font-sans mr-20'>
+            <h1 className='text-sm font-bold font-sans text-[#003399] mr-20'>
               {dataUser[0]?.name}
             </h1>
           </section>

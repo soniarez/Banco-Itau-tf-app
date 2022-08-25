@@ -108,52 +108,55 @@ const DashboardMulti = () => {
 
   return (
     <div>
-      <h1 className='ml-2 text-sm font-medium mt-1' >Últimos Movimientos: </h1>
-      <div style={{ height: 450, width: '98%' }}>
-        <DataGrid
-          rowHeight={25}
-          columns={columns}
-          rows={movementsData}
-          getCellClassName={(params) => {
-            if (params.field === 'payment') {
-              return 'in';
-            }
-            if (params.field === 'charge') {
-              return 'out';
-            }
-          }}
-          pageSize={20}
-          components={{ Toolbar: GridToolbar }}
-          componentsProps={{
-            toolbar: {
-              showQuickFilter: true,
-              quickFilterProps: { debounceMs: 500 },
-            },
-          }}
-          localeText={esES.components.MuiDataGrid.defaultProps.localeText}
-          sx={{
-            boxShadow: 0,
-            border: 0,
-            fontSize: 11,
-            m: 2,
-            borderColor: 'primary.light',
-          '& .MuiDataGrid-cell:hover': {
-            color: 'primary.main',
-          },
-            '& .itau-app-USD': {
-              bgcolor: '#B4B4B4',
-            },
-            '& .in': {
-              color: '#93cf96',
-            },
-            '& .out': {
-              color: '#f5554a',
-            },
-          }}
-          getRowClassName={(params) => `itau-app-${params.row.amount}`}
+      <h1 className='text-3xl text-[#003767] flex ml-10 mt-6 font-bold font-sans'>Últimos Movimientos</h1>
+      <section className='flex mt-6  ml-6 h-screen w-screen'>
+        <div style={{ height: 550, width: 1100 }}>
+          <DataGrid
+            rowHeight={25}
+            columns={columns}
+            rows={movementsData}
+            getCellClassName={(params) => {
+              if (params.field === 'payment') {
+                return 'in';
+              }
+              if (params.field === 'charge') {
+                return 'out';
+              }
+            }}
+            pageSize={20}
+            components={{ Toolbar: GridToolbar }}
+            componentsProps={{
+              toolbar: {
+                showQuickFilter: true,
+                quickFilterProps: { debounceMs: 500 },
+              },
+            }}
+            localeText={esES.components.MuiDataGrid.defaultProps.localeText}
+            sx={{
+              boxShadow: 0,
+              border: 0,
+              fontSize: 11,
+              m: 2,
+              borderColor: 'primary.light',
+              '& .MuiDataGrid-cell:hover': {
+                color: 'primary.main',
+              },
+              '& .itau-app-USD': {
+                bgcolor: '#B4B4B4',
+              },
+              '& .in': {
+                backgroundColor: '#93cf96',
+              },
+              '& .out': {
+                backgroundColor: '#f5554a',
+              },
+            }}
+            getRowClassName={(params) => `itau-app-${params.row.amount}`}
 
-        /> </div>
-      </div>
+          />
+        </div>
+      </section>
+    </div>
   );
 };
 

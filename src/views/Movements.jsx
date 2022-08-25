@@ -8,7 +8,7 @@ const Movements = () => {
   return (
     <div>
       <NavBar />
-      <div className='main-grid'>
+      <div className='flex'>
         <SideBar />
         <div>
           <DashboardMulti />
