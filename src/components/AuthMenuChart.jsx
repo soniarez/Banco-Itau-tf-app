@@ -8,8 +8,20 @@ const AuthMenuChart = ({ data }) => {
 
   const series = [
     {
-      name: 'Height in feet',
-      data: [pending.length, approved.length, rejected.length],
+      name: 'Pendientes',
+      data: [pending.length],
+      color: "#7cb0f7"
+      
+    },
+    {
+      name: 'Aprobadas',
+      data: [approved.length],
+      color: "#4caf50"
+    },
+    {
+      name: 'Rechazadas',
+      data: [rejected.length],
+      color: "#ff5733"
     },
   ];
 
@@ -21,10 +33,26 @@ const AuthMenuChart = ({ data }) => {
       bar: {
         horizontal: true, 
       },
+      tooltip: {
+        followCursor:true,
+      }
     },
     xaxis: {
       categories: ['Pendientes', 'Autorizadas', 'Rechazadas'],
     },
+    yaxis: {
+      labels:{
+        formatter:(val) =>{
+          return `${val}`
+        }
+      }
+    },
+    title: {
+      text: "Transacciones Empresa",
+      style:{
+        fontSize: 12,
+      }
+    }
   };
 
   return (
