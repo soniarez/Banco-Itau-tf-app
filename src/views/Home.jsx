@@ -8,7 +8,7 @@ import Donut from '../components/Donut';
 
 const Home = () => {
   return (
-    <div>
+    <div className='h-full'>
       <NavBar />
       <div className='main-grid bg-[#EEEEEE]'>
         <SideBar />
@@ -18,16 +18,17 @@ const Home = () => {
             <HoldingDonut />
             {/* <Center /> */}
           </div>
-          <div>
+          <div className='flex flex-col items-center'>
             <h1 className='text-3xl text-[#003767] flex ml-2 my-6 font-bold font-sans'>Resumen de empresas</h1>
             <section className='flex flex-row'>
-              <Donut segment={'Corporate Invesment Banking'} />
-              <Donut segment={'Grandes Empresas'} />
-              <Donut segment={'Inmobiliaria'} />
+              <Donut business={'MegaHold Prime'} />
+              <Donut business={'Inversiones Latinoamericanas'} />
+              <Donut business={'Inversiones Hacktahon'} />
             </section>
             <section className='flex flex-row'>
-              <Donut segment={'Institucionales'} />
-              <Donut segment={'Multinacionales'} />
+              <Donut business={'Supermercados Grupo 44'} />
+              <Donut business={'Inmobiliaria Velasco'} />
+              <Donut business={'Universidades Americanas'} />
             </section>
           </div>
         </div>
