@@ -1,10 +1,15 @@
 import { WindowSharp } from '@mui/icons-material';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { onSnapshot, collection, db } from '../firebase/init';
 import empresa from '../img/empresa.png';
 import usuario from '../img/user.png';
 
 const NavBar = () => {
+  const [dataUser, setDataUser] = useState([]);
+
+  console.log('data', dataUser);
+
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem('business');
@@ -12,10 +17,20 @@ const NavBar = () => {
     navigate('/');
   };
 
+  useEffect(() => {
+    onSnapshot(collection(db, 'users'), (snapshot) => {
+      const dataUserFromFirestore = snapshot.docs.map((doc) => {
+        return {
+          docId: doc.id,
+          ...doc.data(),
+        };
+      });
+      setDataUser(dataUserFromFirestore);
+    });
+  }, []);
 
   const business = window.localStorage.business;
   const user = window.localStorage.user;
-
 
   return (
     <nav className='bg-[#FFFFFF] h-[100px] w-screen flex flex-wrap items-center py-2 border-b-2 border-[#EFE9E5] box-border pb-4 shadow-lg justify-between'>
@@ -32,14 +47,10 @@ const NavBar = () => {
             <span className='border-r-4 border-[#003399] h-8 w-1 rounded'></span>
             <div className='flex flex-row ml-8 items-center mr-12'>
               <a className='bg-[#EEEEEE] rounded-[100%] h-10 w-10 flex items-center justify-center mr-2'>
-                <img
-                  className='py-2 h-10'
-                  src={empresa}
-                  alt='Logo Empresa'
-                />
+                <img className='py-2 h-10' src={empresa} alt='Logo Empresa' />
               </a>
               <h1 className='text-[#EC7000] text-sm font-bold font-sans'>
-                {business}
+                {dataUser[0]?.company}
               </h1>
             </div>
           </section>
@@ -52,13 +63,11 @@ const NavBar = () => {
         <div className='flex justify-end mr-32'>
           <section className='flex flex-row items-center mr-12'>
             <a className='bg-[#EEEEEE] rounded-[100%] h-10 w-10 flex items-center justify-center mr-2'>
-              <img
-                className='py-2 h-[35px]'
-                src={usuario}
-                alt='Logo Usuario'
-              />
+              <img className='py-2 h-[35px]' src={usuario} alt='Logo Usuario' />
             </a>
-            <h1 className='text-sm font-bold font-sans mr-20'>{user}</h1>
+            <h1 className='text-sm font-bold font-sans mr-20'>
+              {dataUser[0]?.name}
+            </h1>
           </section>
           <button
             onClick={handleLogout}
@@ -67,7 +76,6 @@ const NavBar = () => {
             Salir
           </button>
         </div>
-
       </div>
     </nav>
   );

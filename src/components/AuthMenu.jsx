@@ -1,72 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
-import {
-  DataGrid,
-  GridToolbar,
-  esES,
-} from '@mui/x-data-grid';
+import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
-import FolderOpenIcon from '@mui/icons-material/FolderOpen';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AuthMenuChart from './AuthMenuChart';
 import '../../src/App.css';
 
 const AuthMenu = () => {
   const [data, setData] = useState([]);
-
-  const dummy = [
-    {
-      amount: 'CLP 23.000.000',
-      company: 'Inversiones Latinoamericanas',
-      date: '02-01-2022 09:00 Hrs',
-      docId: 'Vo812X6EJTkmaSVcQQDh',
-      id: '4f3c79526c34',
-      isAuthorized: false,
-      isRejected: false,
-      origen: '229435678',
-      solution: 'Pago de Tesoreria Gral. Republica',
-      status: 'pendiente',
-    },
-    {
-      amount: 'CLP 450.000',
-      company: 'Inversiones Latinoamericanas',
-      date: '03-01-2022 15:56 Hrs',
-      docId: 'bPwlEp0Sf34WybbQ4ihX',
-      id: '27574c139db3b',
-      isAuthorized: false,
-      isRejected: false,
-      origen: '229435678',
-      solution: 'Transferencias entre Cuentas',
-      status: 'pendiente',
-    },
-    {
-      amount: 'CLP 6.000.000',
-      company: 'MegaHold Prime',
-      date: '02-01-2022 09:00 Hrs',
-      docId: 'cvCvIaztpJYzOS6OGDlF',
-      id: 'dde458581a341',
-      isAuthorized: false,
-      isRejected: false,
-      origen: '210456783',
-      solution: 'Boleta de Garantia',
-      status: 'pendiente',
-    },
-    {
-      amount: 'USD 10,000,000',
-      company: 'MegaHold Prime',
-      date: '03-01-2022 11:11 Hrs',
-      docId: 'eKWOh6yP4SIc6Xe7qDDa',
-      id: '30bf5ef80813b',
-      isAuthorized: false,
-      isRejected: false,
-      origen: '210456783',
-      solution: 'Pago de Impuestos Dolares',
-      status: 'pendiente',
-    },
-  ];
 
   const columns = [
     {
@@ -101,6 +42,7 @@ const AuthMenu = () => {
       headerClassName: 'itau-app',
       align: 'left',
     },
+
     {
       field: 'amount',
       headerName: 'Monto',
@@ -109,10 +51,10 @@ const AuthMenu = () => {
       headerClassName: 'itau-app',
       align: 'center',
     },
-    {
+    /*  {
       field: 'details',
       headerName: 'Detalles',
-      width: 65,
+      width: 100,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
@@ -121,18 +63,19 @@ const AuthMenu = () => {
           <div>
             {data ? (
               <div>
-               {/*  <Checkbox
+                <Button
+                  variant="text"
                   size="small"
-                  icon={<FolderOpenIcon/>}
-                  checkedIcon={<FolderOpenIcon />}
                   sx={{
-                    '&.Mui-checked': {
-                      
-                      color: '#F1AE2F',
-                    },
+                    color: '#f5ac4a',
+                    display: 'inline',
+                    fontWeight: 'bold',
+                    mx: 0.5,
+                    fontSize: 9,
                   }}
-                /> */}
-                <Button variant="outlined">Más detalles</Button>
+                >
+                  Más detalles
+                </Button>
               </div>
             ) : (
               <p>Data is loading...</p>
@@ -140,7 +83,7 @@ const AuthMenu = () => {
           </div>
         );
       },
-    },
+    },  */
     {
       field: 'autorize',
       headerName: 'Autorizar',
@@ -148,7 +91,7 @@ const AuthMenu = () => {
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'center',
-      renderCell: (params) => {
+      renderCell: params => {
         return (
           <div>
             {data ? (
@@ -280,52 +223,57 @@ const AuthMenu = () => {
 
   return (
     <div>
-      <h2>Autorizar Transacciones Multiempresa: </h2>
-      <div className="flex flex-row justify-evenly">
-    
-          <button className='mr-12 bg-[#FFFFFF] border-[#6aec00fd] border text-[#00ec1fb2] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]'>
-           Aceptar todo
-          </button>
-          <button className='mr-12 bg-[#FFFFFF] border-[#ec1000] border text-[#ec2f00] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]'>
-           Rechazar todo
-          </button>
-       
-      </div>
+      <h1 className="ml-2 text-sm font-medium mt-1">
+        Autorizar Transacciones Multiempresa:{' '}
+      </h1>
 
-      <div style={{ height: 430, width: '66%' }}>
+      <div className='flex flex-row h-screen w-screen' >
+        <div>
+          <div style={{height:430, width:"100%"}}>
+            <DataGrid
+              rowHeight={25}
+              columns={columns}
+              rows={pendingTransactions}
+              pageSize={10}
+              rowsPerPageOptions={[10]}
+              components={{ Toolbar: GridToolbar }}
+              componentsProps={{
+                toolbar: {
+                  showQuickFilter: true,
+                  quickFilterProps: { debounceMs: 500 },
+                },
+              }}
+              localeText={esES.components.MuiDataGrid.defaultProps.localeText}
+              sx={{
+                boxShadow: 0,
+                border: 0,
+                fontSize: 11,
+                m: 2,
+                borderColor: 'primary.light',
+                '& .MuiDataGrid-cell:hover': {
+                  color: 'primary.main',
+                },
+                textAlign: 'center',
+                '& .itau-app-USD': {
+                  bgcolor: '#B4B4B4',
+                },
+              }}
+              getRowClassName={params => `itau-app-${params.row.amount}`}
+            />
+          </div>
+          <button
+            className="mr-12 bg-[#f89719] border-[#ec7e00fd] border text-[#0c0902b2] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]"
+            onClick={() => sendTransaction()}
+          >
+            Ejecutar
+          </button>
+        </div>
 
-        <DataGrid
-          rowHeight={25}
-          columns={columns}
-          rows={pendingTransactions}
-          pageSize={10}
-          rowsPerPageOptions={[10]}
-          components={{ Toolbar: GridToolbar }}
-          componentsProps={{
-            toolbar: {
-              showQuickFilter: true,
-              quickFilterProps: { debounceMs: 500 },
-            },
-          }}
-          localeText={esES.components.MuiDataGrid.defaultProps.localeText}
-          sx={{
-            boxShadow: 2,
-            fontSize: 11,
-            m: 2,
-            textAlign: 'center',
-            '& .itau-app-USD': {
-              bgcolor: '#B4B4B4',
-            },
-          }}
-          getRowClassName={params => `itau-app-${params.row.amount}`}
-        />
-      </div>
-      <button className='mr-12 bg-[#f89719] border-[#ec7e00fd] border text-[#0c0902b2] font-bolds rounded-2xl w-[120px] h-[35px] text-sm hover:bg-[#FFE6CE]'
-          onClick={() => sendTransaction()}>Ejecutar</button>
-      <div>
-        <div className='flex-1'>
-        <AuthMenuChart data={data} />
-      </div>
+        <div>
+          <div className='w-full'>
+            <AuthMenuChart data={data} /> 
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './views/Home';
 import Authorization from './views/Authorization';
 import Movements from './views/Movements';
+import Mycompanies from './views/Mycompanies';
 import Login from './views/Login';
 
 function App() {
@@ -10,12 +11,11 @@ function App() {
     <div>
       <Router>
         <Routes>
-
-          <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/authorization" element={<Authorization />} />
-          <Route path="/movements" element={<Movements />} />
-
+          <Route path='/' element={<Login />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/authorization' element={<Authorization />} />
+          <Route path='/mycompanies' element={<Mycompanies />} />
+          <Route path='/movements' element={<Movements />} />
         </Routes>
       </Router>
     </div>

@@ -7,6 +7,7 @@ import {
   updateDoc,
   doc,
 } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js';
+import { getAuth } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js';
 import config from './config';
 import { getFormatCurrency } from '../utility/currencychange';
 
@@ -14,6 +15,7 @@ import { getFormatCurrency } from '../utility/currencychange';
 const app = initializeApp(config);
 
 const db = getFirestore(app);
+const auth = getAuth();
 
 // let transactions = {
 //   data: [
@@ -25,6 +27,9 @@ const db = getFirestore(app);
 //   data: [
 //     {
 //       'Fecha y Hora': '01/01/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '210456783',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -35,6 +40,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '01/02/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '210456783',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -45,6 +53,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '01/03/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '210456783',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -55,6 +66,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '01/04/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '210456783',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -65,6 +79,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '01/05/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '210456783',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -75,6 +92,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '01/06/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '210456783',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -85,6 +105,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '01/07/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '210456783',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
@@ -95,6 +118,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '01/08/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '210456783',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -105,6 +131,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '01/09/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '217683922',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -115,6 +144,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '01/10/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '217683922',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -125,6 +157,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '01/11/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '217683922',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -135,6 +170,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '02/01/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '217683922',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -145,6 +183,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '02/02/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '217683922',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -155,6 +196,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '02/03/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '217683922',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -165,6 +209,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '02/04/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '217683922',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -175,6 +222,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '02/05/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '229875367',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -185,6 +235,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '02/06/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '229875367',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -195,6 +248,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '02/07/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '229875367',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
@@ -205,6 +261,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '02/08/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '229875367',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -215,6 +274,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '02/09/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '229875367',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -225,6 +287,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '02/10/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '229875367',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -235,6 +300,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '02/11/2022',
+//       Rut: '76.894.657-5',
+//       'Razon Social': 'MegaHold Prime',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '229875367',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -245,6 +313,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '03/01/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '236748967',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -255,6 +326,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '03/02/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '236748967',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -265,6 +339,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '03/03/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '236748967',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -275,6 +352,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '03/04/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '236748967',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -285,6 +365,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '03/05/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '236748967',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -295,6 +378,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '03/06/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '236748967',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -305,6 +391,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '03/07/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '236748967',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
@@ -315,6 +404,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '03/08/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '214536278',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -325,6 +417,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '03/09/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '214536278',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -335,6 +430,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '03/10/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '214536278',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -345,6 +443,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '03/11/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '214536278',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -355,6 +456,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '04/01/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '214536278',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -365,6 +469,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '04/02/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '214536278',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -375,6 +482,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '04/03/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '214536278',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -385,6 +495,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '04/04/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '237849567',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -395,6 +508,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '04/05/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '237849567',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -405,6 +521,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '04/06/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '237849567',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -415,6 +534,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '04/07/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '237849567',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
@@ -425,6 +547,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '04/08/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '237849567',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -435,6 +560,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '04/09/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '237849567',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -445,6 +573,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '04/10/2022',
+//       Rut: '90.123.567-0',
+//       'Razon Social': 'Inmobiliaria Velasco',
+//       Segmento: 'Inmobiliaria',
 //       Cuenta: '237849567',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -455,6 +586,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '04/11/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223987454',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -465,6 +599,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '05/01/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223987454',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -475,6 +612,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '05/02/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223987454',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -485,6 +625,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '05/03/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223987454',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -495,6 +638,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '05/04/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223987454',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -505,6 +651,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '05/05/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223987454',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -515,6 +664,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '05/06/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223987454',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -525,6 +677,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '05/07/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223764839',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
@@ -535,6 +690,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '05/08/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223764839',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -545,6 +703,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '05/09/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223764839',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -555,6 +716,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '05/10/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223764839',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -565,6 +729,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '05/11/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223764839',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -575,6 +742,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '06/01/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223764839',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -585,6 +755,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '06/02/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '223764839',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -595,6 +768,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '06/03/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '211235678',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -605,6 +781,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '06/04/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '211235678',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -615,6 +794,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '06/05/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '211235678',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -625,6 +807,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '06/06/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '211235678',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -635,6 +820,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '06/07/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '211235678',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
@@ -645,6 +833,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '06/08/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '211235678',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -655,6 +846,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '06/09/2022',
+//       Rut: '77.879.456-9',
+//       'Razon Social': 'Inversiones Hacktahon',
+//       Segmento: 'Grandes Empresas',
 //       Cuenta: '211235678',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -665,6 +859,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '06/10/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '229435678',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -675,6 +872,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '06/11/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '229435678',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -685,6 +885,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '07/01/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '229435678',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -695,6 +898,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '07/02/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '229435678',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -705,6 +911,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '07/03/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '229435678',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -715,6 +924,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '07/04/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '229435678',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -725,6 +937,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '07/05/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '229435678',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -735,6 +950,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '07/06/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '220674598',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -745,6 +963,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '07/07/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '220674598',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
@@ -755,6 +976,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '07/08/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '220674598',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -765,6 +989,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '07/09/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '220674598',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -775,6 +1002,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '07/10/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '220674598',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -785,6 +1015,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '07/11/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '220674598',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -795,6 +1028,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '08/01/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '220674598',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -805,6 +1041,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '08/02/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '226354968',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -815,6 +1054,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '08/03/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '226354968',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -825,6 +1067,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '08/04/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '226354968',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -835,6 +1080,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '08/05/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '226354968',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -845,6 +1093,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '08/06/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '226354968',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -855,6 +1106,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '08/07/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '226354968',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
@@ -865,6 +1119,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '08/08/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '226354968',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -875,6 +1132,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '08/09/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '215364789',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -885,6 +1145,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '08/10/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '215364789',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -895,6 +1158,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '08/11/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '215364789',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -905,6 +1171,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '09/01/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '215364789',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -915,6 +1184,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '09/02/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '215364789',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -925,6 +1197,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '09/03/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '215364789',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -935,6 +1210,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '09/04/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '215364789',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -945,6 +1223,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '09/05/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '126473890',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -955,6 +1236,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '09/06/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '126473890',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -965,6 +1249,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '09/07/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '126473890',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
@@ -975,6 +1262,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '09/08/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '126473890',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -985,6 +1275,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '09/09/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '126473890',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -995,6 +1288,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '09/10/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '126473890',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -1005,6 +1301,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '09/11/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '126473890',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -1015,6 +1314,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '10/01/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '223647891',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -1025,6 +1327,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '10/02/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '223647891',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -1035,6 +1340,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '10/03/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '223647891',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -1045,6 +1353,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '10/04/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '223647891',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -1055,6 +1366,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '10/05/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '223647891',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -1065,6 +1379,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '10/06/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '223647891',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -1075,6 +1392,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '10/07/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '223647891',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
@@ -1085,6 +1405,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '10/08/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '224637807',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -1095,6 +1418,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '10/09/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '224637807',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -1105,6 +1431,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '10/10/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '224637807',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -1115,6 +1444,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '10/11/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '224637807',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -1125,6 +1457,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '11/01/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '224637807',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -1135,6 +1470,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '11/02/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '224637807',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -1145,6 +1483,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '11/03/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '224637807',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -1155,6 +1496,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '11/04/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '223564738',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -1165,6 +1509,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '11/05/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '223564738',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -1175,6 +1522,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '11/06/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '223564738',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -1185,15 +1535,22 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '11/07/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '223564738',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
 //       Sucursal: 'Operaciones Web',
 //       Abono: '',
+//       Cargo: '100',
 //       Currencycode: 'CLP',
 //     },
 //     {
 //       'Fecha y Hora': '11/08/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '223564738',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -1204,6 +1561,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '11/09/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '223564738',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -1214,6 +1574,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '11/10/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '223564738',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -1224,6 +1587,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '11/11/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '223564738',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -1234,6 +1600,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '12/01/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '223564738',
 //       'Codigo Movimiento': '11',
 //       Descripcion: 'ABONO TRANSFERENCIA INTERNET',
@@ -1244,6 +1613,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '12/02/2022',
+//       Rut: '95.476.897-1',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '223564738',
 //       'Codigo Movimiento': '762',
 //       Descripcion: 'ABONO PAGO DE PROVEEDORES',
@@ -1254,6 +1626,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '12/03/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '224637807',
 //       'Codigo Movimiento': '981',
 //       Descripcion: 'ABONO MANUAL DE COMEX',
@@ -1264,6 +1639,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '12/04/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '224637807',
 //       'Codigo Movimiento': '983',
 //       Descripcion: 'ABONO TRANSFERENCIA SPAV',
@@ -1274,6 +1652,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '12/05/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '223647891',
 //       'Codigo Movimiento': '10',
 //       Descripcion: 'CARGO TRANSFERENCIA INTERNET',
@@ -1284,6 +1665,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '12/06/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '223647891',
 //       'Codigo Movimiento': '703',
 //       Descripcion: 'PAGO PREVIRED',
@@ -1294,6 +1678,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '12/07/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '226354968',
 //       'Codigo Movimiento': '761',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES',
@@ -1304,6 +1691,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '12/08/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '226354968',
 //       'Codigo Movimiento': '837',
 //       Descripcion: 'PAGO EFECTUADO A PROVEEDORES',
@@ -1314,6 +1704,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '12/09/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Inversiones Latinoamericanas',
+//       Segmento: 'Multinacionales',
 //       Cuenta: '226354968',
 //       'Codigo Movimiento': '861',
 //       Descripcion: 'CARGO PAGO DE REMUNERACIONES H2H',
@@ -1324,6 +1717,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '12/10/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '215364789',
 //       'Codigo Movimiento': '982',
 //       Descripcion: 'CARGO MANUAL DE COMEX',
@@ -1334,6 +1730,9 @@ const db = getFirestore(app);
 //     },
 //     {
 //       'Fecha y Hora': '12/11/2022',
+//       Rut: '81.345.789-0',
+//       'Razon Social': 'Supermercados Grupo 44',
+//       Segmento: 'Corporate Invesment Banking',
 //       Cuenta: '215364789',
 //       'Codigo Movimiento': '987',
 //       Descripcion: 'CARGO TRANSFERENCIA SPAV',
@@ -1343,17 +1742,23 @@ const db = getFirestore(app);
 //       Currencycode: 'CLP',
 //     },
 //     {
-//       'Fecha y Hora': '01-01-2022',
+//       'Fecha y Hora': '01/01/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '362925378',
 //       'Codigo Movimiento': '123',
 //       Descripcion: 'COMPRA DOLARES',
 //       Sucursal: 'Operaciones Web',
 //       Abono: '10000000',
-//       Cargo: '',
+//       Cargo: '2765987',
 //       Currencycode: 'USD',
 //     },
 //     {
-//       'Fecha y Hora': '02-01-2022',
+//       'Fecha y Hora': '01/02/2022',
+//       Rut: '61.145.789-0',
+//       'Razon Social': 'Universidades Americanas',
+//       Segmento: 'Institucionales',
 //       Cuenta: '362925378',
 //       'Codigo Movimiento': '124',
 //       Descripcion: 'VENTA DOLARES',
@@ -1365,15 +1770,18 @@ const db = getFirestore(app);
 //   ],
 // };
 
-// let companies = {
-//   data: [],
-// };
+// // let companies = {
+// //   data: [],
+// // };
 
 // export const dataset = movements.data.forEach(function (obj) {
 //   const postId = Math.random().toString(16).slice(2);
 //   addDoc(collection(db, 'movements'), {
 //     id: postId,
 //     date: obj['Fecha y Hora'],
+//     rut: obj.Rut,
+//     ['Razon Social']: obj['Razon Social'],
+//     segment: obj.Segmento,
 //     account: obj.Cuenta,
 //     codemov: obj['Codigo Movimiento'],
 //     description: obj.Descripcion,
