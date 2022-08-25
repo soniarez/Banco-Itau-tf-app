@@ -3,7 +3,7 @@ import React from "react";
 
 const HoldingDonut = () => {
     const options = {
-        labels: ['Abono', 'Cargo'],
+        labels: ['Ganancia', 'Inversión'],
         title: { text: 'Rentabilidad Holding' },
         colors: ['#2ECC71', '#FF5733'],
         dataLabels: {

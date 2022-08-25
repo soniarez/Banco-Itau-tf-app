@@ -4,8 +4,6 @@ import SideBar from '../components/SideBar';
 import Footer from '../components/Footer';
 import WidgetsAuth from '../components/WidgetsAuth';
 import HoldingDonut from '../components/HoldingDonut';
-//import Center from '../components/Center';
-
 
 const Home = () => {
   return (
@@ -13,8 +11,7 @@ const Home = () => {
        <NavBar />
       <div className='main-grid'>
         <SideBar />
-        <div>
-          <h1>HOME</h1>  
+        <div> 
           <WidgetsAuth />
           <HoldingDonut />
           {/* <Center /> */}
