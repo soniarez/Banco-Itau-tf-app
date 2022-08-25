@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { onSnapshot, collection, db, updateDoc, doc } from '../firebase/init';
+import { onSnapshot, collection, db } from '../firebase/init';
 import { DataGrid, GridToolbar, esES } from '@mui/x-data-grid';
-
 
 const DashboardMulti = () => {
   const [movementsData, setMovementsData] = useState([]);
@@ -110,12 +109,19 @@ const DashboardMulti = () => {
   return (
     <div>
       <h1 className='ml-2 text-sm font-medium mt-1' >Últimos Movimientos: </h1>
-    
       <div style={{ height: 450, width: '98%' }}>
         <DataGrid
           rowHeight={25}
           columns={columns}
           rows={movementsData}
+          getCellClassName={(params) => {
+            if (params.field === 'payment') {
+              return 'in';
+            }
+            if (params.field === 'charge') {
+              return 'out';
+            }
+          }}
           pageSize={20}
           components={{ Toolbar: GridToolbar }}
           componentsProps={{
@@ -137,14 +143,20 @@ const DashboardMulti = () => {
             '& .itau-app-USD': {
               bgcolor: '#B4B4B4',
             },
+            '& .in': {
+              backgroundColor: '#93cf96',
+            },
+            '& .out': {
+              backgroundColor: '#f5554a',
+            },
           }}
           getRowClassName={(params) => `itau-app-${params.row.amount}`}
 
         /> </div>
       </div>
-      
-
+    </div>
   );
 };
+
 
 export default DashboardMulti;

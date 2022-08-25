@@ -1,8 +1,6 @@
 import React from 'react'
 import Link from '@mui/material/Link'
 
-
-
 const Footer = () => {
   return (
     <div className='bg-[#003767] text-[#EEEEEE]   bottom-0 p-4 flex justify-between min-w-[600px] h-[91px] '>
