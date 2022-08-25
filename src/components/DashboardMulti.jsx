@@ -66,7 +66,7 @@ const DashboardMulti = () => {
     {
       field: 'payment',
       headerName: 'Abono',
-      width: 140,
+      width: 160,
       headerAlign: 'center',
       headerClassName: 'itau-app',
       align: 'left',
@@ -107,10 +107,10 @@ const DashboardMulti = () => {
   }, []);
 
   return (
-    <div>
-      <h1 className='text-3xl text-[#003767] flex ml-10 mt-6 font-bold font-sans'>Últimos Movimientos</h1>
-      <section className='flex mt-6  ml-6 h-screen w-screen'>
-        <div style={{ height: 550, width: 1100 }}>
+    <div className='flex flex-col'>
+      <h1 className='flex text-3xl text-[#003767]  ml-10 font-bold font-sans'>Últimos Movimientos</h1>
+      <section className='flex  mt-6 w-screen'>
+        <div style={{ height: 550, width: 1310 }}>
           <DataGrid
             rowHeight={25}
             columns={columns}
@@ -135,7 +135,7 @@ const DashboardMulti = () => {
             sx={{
               boxShadow: 0,
               border: 0,
-              fontSize: 11,
+              fontSize: 14,
               m: 2,
               borderColor: 'primary.light',
               '& .MuiDataGrid-cell:hover': {
@@ -145,10 +145,10 @@ const DashboardMulti = () => {
                 bgcolor: '#B4B4B4',
               },
               '& .in': {
-                backgroundColor: '#93cf96',
+                color: '#5db761',
               },
               '& .out': {
-                backgroundColor: '#f5554a',
+                color: '#f5554a',
               },
             }}
             getRowClassName={(params) => `itau-app-${params.row.amount}`}
